@@ -14,6 +14,7 @@
     },
     "require-dev": {
         "behat/behat": "^3.14",
+        "deployer/deployer": "^7.3",
         "fakerphp/faker": "^1.9.1",
         "larastan/larastan": "^2.0",
         "laravel/pint": "^1.0",
