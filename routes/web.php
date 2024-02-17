@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CanvasUiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,25 +18,33 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('contact', function () {
+    return view('contact/contact');
+});
+
+Route::get('about', function () {
+    return view('contact/about');
+});
+
 Route::prefix('canvas-ui')->group(function () {
     Route::prefix('api')->group(function () {
-        Route::get('posts', [\App\Http\Controllers\CanvasUiController::class, 'getPosts']);
-        Route::get('posts/{slug}', [\App\Http\Controllers\CanvasUiController::class, 'showPost'])
+        Route::get('posts', [CanvasUiController::class, 'getPosts']);
+        Route::get('posts/{slug}', [CanvasUiController::class, 'showPost'])
              ->middleware('Canvas\Http\Middleware\Session');
 
-        Route::get('tags', [\App\Http\Controllers\CanvasUiController::class, 'getTags']);
-        Route::get('tags/{slug}', [\App\Http\Controllers\CanvasUiController::class, 'showTag']);
-        Route::get('tags/{slug}/posts', [\App\Http\Controllers\CanvasUiController::class, 'getPostsForTag']);
+        Route::get('tags', [CanvasUiController::class, 'getTags']);
+        Route::get('tags/{slug}', [CanvasUiController::class, 'showTag']);
+        Route::get('tags/{slug}/posts', [CanvasUiController::class, 'getPostsForTag']);
 
-        Route::get('topics', [\App\Http\Controllers\CanvasUiController::class, 'getTopics']);
-        Route::get('topics/{slug}', [\App\Http\Controllers\CanvasUiController::class, 'showTopic']);
-        Route::get('topics/{slug}/posts', [\App\Http\Controllers\CanvasUiController::class, 'getPostsForTopic']);
+        Route::get('topics', [CanvasUiController::class, 'getTopics']);
+        Route::get('topics/{slug}', [CanvasUiController::class, 'showTopic']);
+        Route::get('topics/{slug}/posts', [CanvasUiController::class, 'getPostsForTopic']);
 
-        Route::get('users/{id}', [\App\Http\Controllers\CanvasUiController::class, 'showUser']);
-        Route::get('users/{id}/posts', [\App\Http\Controllers\CanvasUiController::class, 'getPostsForUser']);
+        Route::get('users/{id}', [CanvasUiController::class, 'showUser']);
+        Route::get('users/{id}/posts', [CanvasUiController::class, 'getPostsForUser']);
     });
 
-    Route::get('/{view?}', [\App\Http\Controllers\CanvasUiController::class, 'index'])
+    Route::get('/{view?}', [CanvasUiController::class, 'index'])
          ->where('view', '(.*)')
          ->name('canvas-ui');
 });

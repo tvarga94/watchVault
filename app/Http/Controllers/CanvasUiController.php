@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Canvas\Models\User;
 use Canvas\Events\PostViewed;
 use Canvas\Models\Post;
