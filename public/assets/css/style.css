@@ -2168,11 +2168,6 @@ body.page-template-blog_f-php .post_excerpt_full
 	margin: auto;
 }
 
-.post_excerpt br:first:child
-{
-	display: none;
-}
-
 .post_related strong
 {
 	font-size: 18px;
@@ -2299,7 +2294,7 @@ body.page-template-blog_f-php .post_excerpt_full
 
 .post_info_date
 {
-	font-family: ''Josefin Sans'', 'Georgia', Arial,Verdana,sans-serif;
+	font-family: 'Josefin Sans', 'Georgia', Arial,Verdana,sans-serif;
 	font-style: italic;
 	color: #999;
 	position: relative;
@@ -2360,7 +2355,7 @@ body.page-template-blog_f-php .post_excerpt_full
 	color: #999;
 	letter-spacing: 0;
 	font-size: 12px;
-	font-family: ''Josefin Sans'', 'Georgia', Arial,Verdana,sans-serif;
+	font-family: 'Josefin Sans', 'Georgia', Arial,Verdana,sans-serif;
 	font-style: italic;
 }
 
@@ -2583,11 +2578,6 @@ ul.children div.comment .right
 {
 	margin: 0;
 	padding: 0;
-}
-
-.comment .right strong
-{
-	font-weight: #fff;
 }
 
 #content_wrapper ul.children
@@ -3182,7 +3172,7 @@ body.single .post_img img
 	font-size: 14px;
 }
 
-#social_share_wrapper.inline, , .social_share_bubble.inline
+#social_share_wrapper.inline, .social_share_bubble.inline
 {
 	text-align: center;
 	border:0;
@@ -5313,12 +5303,7 @@ ul.flickr li
 	 font-weight: normal;
 	 text-transform: none;
 }
-#captcha-wrap .captcha-action
-{
-	float:right; width:117px;
-	background:url(../images/logos.jpg) top right no-repeat;
-	height:44px; margin-top:3px;
-}
+
 #captcha-wrap  img#captcha-refresh
 {
 	margin-top:9px;
