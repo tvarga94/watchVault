@@ -48,13 +48,13 @@
                 <div class="social_wrapper">
                     <ul>
                         <li class="facebook">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.tiktok.com/@thewatchvault_official"><i class="fa fa-ticket"></i></a>
                         </li>
                         <li class="twitter">
-                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="https://youtube.com/@thewatchvault_official"><i class="fa fa-youtube-play"></i></a>
                         </li>
                         <li class="pinterest">
-                            <a title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+                            <a title="Pinterest" href="https://pin.it/3B2TkrumK"><i class="fa fa-pinterest"></i></a>
                         </li>
                         <li class="instagram">
                             <a title="Instagram" href="#"><i class="fa fa-instagram"></i></a>
@@ -172,7 +172,7 @@
         <div id="logo_normal" class="logo_container">
             <div class="logo_align">
                 <a id="custom_logo" class="logo_wrapper default" href="index.html">
-                    <img src="{{ asset('assets/images/logo@2x.png') }}" alt="" width="252" height="108" />
+                    <img src="{{ asset('assets/TWV_Logo.png') }}" alt="" width="252" height="108" />
                 </a>
             </div>
         </div>
@@ -243,6 +243,140 @@
             </ul>
         </div>
     </div>
+
+    <div class="section_1">
+        <div class="container">
+            <div class="columns">
+                <img
+                    src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
+                <div class="card_body">
+                    <div class="card-content">
+                        <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services">The
+                                Best
+                                VPN Services to use in 2024 | Top VPN Providers for all Devices Tested</a></h3>
+                        <p class="card-text">The VPN market is full of services claiming to be the most secure, the
+                            fastest,
+                            or the best around. So, who can you trust? We've reviewed over 140 different VPN services to
+                            find the best. This guide will help you cut through the noise to see which VPNs are at the
+                            top
+                            of the pecking order.</p>
+                    </div>
+                    <footer class="card-meta">
+                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 512 512">
+                                <title>Last Updated Date</title>
+                                <path style="fill:#5c7099;"
+                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z">
+                                </path>
+                                <path style="fill:#5c7099;"
+                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                                </path>
+                            </svg></dt>
+                        <dd>October 13, 2023</dd>
+                    </footer>
+                </div>
+            </div>
+            <div class="columns">
+                <!-- col1 -->
+                <div class="innercolumns">
+                    <img
+                        src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                    <div class="card-body">
+                        <div class="card-content">
+                            <h3 class="card-title"><a
+                                    href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
+                                    services if you're on a budget</a></h3>
+                        </div>
+                        <footer class="card-meta">
+                            <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 512 512">
+                                    <title>Last Updated Date</title>
+                                    <path style="fill:#5c7099;"
+                                          d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
+                                    <path style="fill:#5c7099;"
+                                          d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                                    </path>
+                                </svg></dt>
+                            <dd>May 2, 2023</dd>
+                        </footer>
+                    </div>
+                </div>
+                <!-- col2 -->
+                <div class="innercolumns">
+                    <img
+                        src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                    <div class="card-body">
+                        <div class="card-content">
+                            <h3 class="card-title"><a
+                                    href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
+                                    services if you're on a budget</a></h3>
+                        </div>
+                        <footer class="card-meta">
+                            <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 512 512">
+                                    <title>Last Updated Date</title>
+                                    <path style="fill:#5c7099;"
+                                          d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
+                                    <path style="fill:#5c7099;"
+                                          d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                                    </path>
+                                </svg></dt>
+                            <dd>May 2, 2023</dd>
+                        </footer>
+                    </div>
+                </div>
+                <!-- col3 -->
+                <div class="innercolumns">
+                    <img
+                        src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                    <div class="card-body">
+                        <div class="card-content">
+                            <h3 class="card-title"><a
+                                    href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
+                                    services if you're on a budget</a></h3>
+                        </div>
+                        <footer class="card-meta">
+                            <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 512 512">
+                                    <title>Last Updated Date</title>
+                                    <path style="fill:#5c7099;"
+                                          d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
+                                    <path style="fill:#5c7099;"
+                                          d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                                    </path>
+                                </svg></dt>
+                            <dd>May 2, 2023</dd>
+                        </footer>
+                    </div>
+                </div>
+                <!-- col4 -->
+                <div class="innercolumns">
+                    <img
+                        src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                    <div class="card-body">
+                        <div class="card-content">
+                            <h3 class="card-title"><a
+                                    href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
+                                    services if you're on a budget</a></h3>
+                        </div>
+                        <footer class="card-meta">
+                            <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 512 512">
+                                    <title>Last Updated Date</title>
+                                    <path style="fill:#5c7099;"
+                                          d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
+                                    <path style="fill:#5c7099;"
+                                          d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                                    </path>
+                                </svg></dt>
+                            <dd>May 2, 2023</dd>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div id="page_content_wrapper">
         <div class="inner three_cols">
@@ -606,55 +740,113 @@
             </li>
         </ul>
     </div>
-    <section class="subscribe">
-        <div class="container">
-            <div class="section-header">
-                <h2>Newsletter</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
 
-            <form method="post" action="#">
-                <div class="form-row center">
-                    <div class="col-auto padding-bottom">
-                        <input type="text" class="form-control" placeholder="Enter your Email">
-                    </div>
-                    <div class="col-auto">
-                        <button type="submit">Subscribe</button>
+    <footer class="footer push-element">
+        <div class="container container--wide">
+            <div class="frame footer__content-frame">
+                <div >
+                    <div class="text-center footer__logo">
+                        <a href="https://monochrome-watches.com">
+                            <div>
+                                <img src="https://monochrome-watches.com/wp-content/themes/monochromewatches/dist/images/icon-monochrome-watches.svg"
+                                     alt="Monochrome Watches" class="img-responsive" width="200" height="85">
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </form>
-
-
-
-
-
-            <div class="subscribe_text">
-                <div class="box box1" style="background-color:red;">
-                    <a href="single-right_sidebar.html">Right Sidebar Post</a>
-                    <a href="single-fullwidth.html">Single Fullwidth</a>
-                    <a href="single-left_sidebar.html">Single Left Sidebar Post</a>
+                <div>
+                    <div class="frame">
+                        <div>
+                            <section class="widget nav_menu-2 widget_nav_menu">
+                                <h3>Menu</h3>
+                                <ul id="menu-footermenu" class="menu">
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134196">
+                                        <a href="https://monochrome-watches.com/about/">About</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134189">
+                                        <a href="https://monochrome-watches.com/masthead/">Masthead</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137349">
+                                        <a href="https://monochrome-watches.com/our-story/">Our Story</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-187941">
+                                        <a href="https://monochrome-watches.com/jobs/">JOBS</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div>
+                            <section class="widget nav_menu-4 widget_nav_menu">
+                                <h3>Contact</h3>
+                                <ul id="menu-contact-menu" class="menu">
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137350">
+                                        <a href="https://monochrome-watches.com/contact/">Contact</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137351">
+                                        <a href="https://monochrome-watches.com/advertising/">Advertising</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div>
+                            <section class="widget nav_menu-3 widget_nav_menu">
+                                <h3>Social Stuff</h3>
+                                <ul id="menu-follow" class="menu">
+                                    <li
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134146">
+                                        <a href="https://www.linkedin.com/company/449064/">Linkedin</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134147">
+                                        <a href="https://www.instagram.com/monochromewatches/">Instagram</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134149">
+                                        <a href="https://www.facebook.com/MonochromeWatches/">Facebook</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134148">
+                                        <a href="https://twitter.com/monochromewatch">Twitter</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div>
+                            <section class="widget text-104 widget_text">
+                                <h3>Partners</h3>
+                                <div class="textwidget">
+                                    <p>
+                                        <a href="http://www.gphg.org/" target="_blank" rel="noopener">
+                                            <noscript>
+                                                <img src="https://monochrome-watches.com/wp-content/uploads/2018/04/LOGO-GPHG-FONDATION-NEG.png"
+                                                     width="150" height="120" alt="GPHG" />
+                                            </noscript>
+                                            <img src="https://monochrome-watches.com/wp-content/uploads/2018/04/LOGO-GPHG-FONDATION-NEG.png"
+                                                 data-src="https://monochrome-watches.com/wp-content/uploads/2018/04/LOGO-GPHG-FONDATION-NEG.png"
+                                                 width="150" height="120" alt="GPHG"
+                                                 class="lazy-images img-responsive lazy-images--loaded"
+                                                 data-ll-status="loaded">
+                                        </a>
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
                 </div>
-                <div class="box box2" style="background-color:blue">
-                    <a href="single-right_sidebar.html">Right Sidebar Post</a>
-                    <a href="single-fullwidth.html">Single Fullwidth</a>
-                    <a href="single-left_sidebar.html">Single Left Sidebar Post</a>
-                </div>
-                <div class="box box3" style="background-color:yellow">
-                    <a href="single-right_sidebar.html">Right Sidebar Post</a>
-                    <a href="single-fullwidth.html">Single Fullwidth</a>
-                    <a href="single-left_sidebar.html">Single Left Sidebar Post</a>
-                </div>
-                <!-- Add more divs as needed -->
             </div>
 
-
-
-
-
-
-
+            <div class="frame footer__copyright-frame">
+                <div>
+                    <div class="footer__copyright">
+                        © 2006–
+                        2024 Monochrome
+                        <span class="footer__sep">|</span>
+                        <ul id="menu-privacy-menu" class="footer-privacy-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134157"><a
+                                    href="https://monochrome-watches.com/privacy-policy-of-monochrome-watches-com/">Privacy
+                                    policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </footer>
 </div>
 
 <div id="overlay_background"></div>

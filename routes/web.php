@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CanvasUiController;
+use App\Http\Controllers\WatchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,8 @@ Route::get('about', function () {
     return view('contact/about');
 });
 
+Route::get('proba/{slug}', [CanvasUiController::class, 'getAllPostsWithSpecificTopic']);
+
 Route::prefix('canvas-ui')->group(function () {
     Route::prefix('api')->group(function () {
         Route::get('posts', [CanvasUiController::class, 'getPosts']);
@@ -48,3 +51,10 @@ Route::prefix('canvas-ui')->group(function () {
          ->where('view', '(.*)')
          ->name('canvas-ui');
 });
+
+
+Route::get('/watch', [WatchController::class, 'index']);
+Route::post('/watch/addWatch', [WatchController::class, 'add']);
+Route::get('/watch/delete/{id}', [WatchController::class, 'delete']);
+Route::get('/watch/edit/{id}', [WatchController::class, 'edit']);
+Route::post('/watch/edit/{id}', [WatchController::class, 'update']);

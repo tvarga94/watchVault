@@ -1,0 +1,144 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": "46fe8630-6480-4519-9890-a9675870095d",
+            "slug": "post-46fe8630-6480-4519-9890-a9675870095d",
+            "title": "ProbaTa,as",
+            "summary": "Description",
+            "body": "<p>awdawdwadawdwad<\/p>",
+            "published_at": null,
+            "featured_image": null,
+            "featured_image_caption": null,
+            "user_id": "8c32f7cf-1550-4f52-adce-d61322c56c68",
+            "meta": {
+                "description": null,
+                "title": null,
+                "canonical_link": null
+            },
+            "created_at": "2024-02-18T13:51:39.000000Z",
+            "updated_at": "2024-02-18T13:52:00.000000Z",
+            "deleted_at": null,
+            "read_time": "1 min read",
+            "topic": [
+                {
+                    "id": "857530bc-6d78-4d2f-a7eb-281e2c00f0f6",
+                    "slug": "style",
+                    "name": "style",
+                    "user_id": "df635a21-5181-423c-be1c-f0827f05bcad",
+                    "created_at": "2024-02-18T13:50:20.000000Z",
+                    "updated_at": "2024-02-18T13:50:20.000000Z",
+                    "deleted_at": null,
+                    "pivot": {
+                        "post_id": "46fe8630-6480-4519-9890-a9675870095d",
+                        "topic_id": "857530bc-6d78-4d2f-a7eb-281e2c00f0f6"
+                    }
+                }
+            ],
+            "user": {
+                "id": "8c32f7cf-1550-4f52-adce-d61322c56c68",
+                "name": "Varga Tamas",
+                "email": "email22@example.com",
+                "username": null,
+                "summary": null,
+                "avatar": null,
+                "dark_mode": null,
+                "digest": null,
+                "locale": "en",
+                "role": 1,
+                "created_at": "2024-02-18T13:50:59.000000Z",
+                "updated_at": "2024-02-18T13:50:59.000000Z",
+                "deleted_at": null,
+                "default_avatar": "https:\/\/secure.gravatar.com\/avatar\/5fe5de22f20d0e792c41f5555ee0ffce?s=200&d=retro&r=g",
+                "default_locale": "en"
+            },
+            "pivot": {
+                "topic_id": "857530bc-6d78-4d2f-a7eb-281e2c00f0f6",
+                "post_id": "46fe8630-6480-4519-9890-a9675870095d"
+            }
+        },
+        {
+            "id": "8e9b447f-5793-4321-bd83-6345320800c2",
+            "slug": "post-8e9b447f-5793-4321-bd83-6345320800c2",
+            "title": "AWDAWDAW",
+            "summary": null,
+            "body": "<p>AWDAWDAWDA<\/p>",
+            "published_at": "2024-02-09",
+            "featured_image": null,
+            "featured_image_caption": null,
+            "user_id": "df635a21-5181-423c-be1c-f0827f05bcad",
+            "meta": {
+                "description": null,
+                "title": null,
+                "canonical_link": null
+            },
+            "created_at": "2024-02-09T17:09:31.000000Z",
+            "updated_at": "2024-02-18T20:13:53.000000Z",
+            "deleted_at": null,
+            "read_time": "1 min read",
+            "topic": [
+                {
+                    "id": "857530bc-6d78-4d2f-a7eb-281e2c00f0f6",
+                    "slug": "style",
+                    "name": "style",
+                    "user_id": "df635a21-5181-423c-be1c-f0827f05bcad",
+                    "created_at": "2024-02-18T13:50:20.000000Z",
+                    "updated_at": "2024-02-18T13:50:20.000000Z",
+                    "deleted_at": null,
+                    "pivot": {
+                        "post_id": "8e9b447f-5793-4321-bd83-6345320800c2",
+                        "topic_id": "857530bc-6d78-4d2f-a7eb-281e2c00f0f6"
+                    }
+                }
+            ],
+            "user": {
+                "id": "df635a21-5181-423c-be1c-f0827f05bcad",
+                "name": "Example User",
+                "email": "email@example.com",
+                "username": null,
+                "summary": null,
+                "avatar": null,
+                "dark_mode": false,
+                "digest": false,
+                "locale": "en",
+                "role": 3,
+                "created_at": "2024-01-16T23:24:55.000000Z",
+                "updated_at": "2024-01-30T16:26:23.000000Z",
+                "deleted_at": null,
+                "default_avatar": "https:\/\/secure.gravatar.com\/avatar\/5658ffccee7f0ebfda2b226238b1eb6e?s=200&d=retro&r=g",
+                "default_locale": "en"
+            },
+            "pivot": {
+                "topic_id": "857530bc-6d78-4d2f-a7eb-281e2c00f0f6",
+                "post_id": "8e9b447f-5793-4321-bd83-6345320800c2"
+            }
+        }
+    ],
+    "first_page_url": "http:\/\/127.0.0.1:8000\/proba\/style?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "http:\/\/127.0.0.1:8000\/proba\/style?page=1",
+    "links": [
+        {
+            "url": null,
+            "label": "&laquo; Previous",
+            "active": false
+        },
+        {
+            "url": "http:\/\/127.0.0.1:8000\/proba\/style?page=1",
+            "label": "1",
+            "active": true
+        },
+        {
+            "url": null,
+            "label": "Next &raquo;",
+            "active": false
+        }
+    ],
+    "next_page_url": null,
+    "path": "http:\/\/127.0.0.1:8000\/proba\/style",
+    "per_page": 10,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2
+}
