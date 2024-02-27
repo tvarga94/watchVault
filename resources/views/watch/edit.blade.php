@@ -32,13 +32,13 @@
             <label for="Image">Image</label>
             <input type="text" class="form-control" name="image" placeholder="Image" value="{{$watch['image']}}">
         </div>
-             </td></tr>
-             <tr><td>
+             </td><td>
         <div class="form-group mb-2">
             <label for="Price">Price</label>
             <input type="text" class="form-control" name="price" placeholder="Price" value="{{$watch['price']}}">
         </div>
-             </td><td>
+             </td></tr>
+             <tr><td>
         <div class="form-group mb-2">
             <label for="PriceRange">Price Range Brand Class</label>
             <input type="text" class="form-control" name="price_range_brand_class" placeholder="Enter Price Range Branc Class" value="{{$watch['price_range_brand_class']}}">
@@ -48,8 +48,7 @@
             <label for="movement">Movement</label>
             <input type="text" class="form-control" name="movement" placeholder="Enter movement" value="{{$watch['movement']}}">
         </div>
-             </td></tr>
-             <tr><td>
+             </td><td>
         <div class="form-group mb-2">
             <label for="functionality">Functionality</label>
             <input type="text" class="form-control" name="functionality" placeholder="Enter functionality" value="{{$watch['functionality']}}">
@@ -59,13 +58,13 @@
             <label for="style1">Style 1</label>
             <input type="text" class="form-control" name="style1" placeholder="Style 1" value="{{$watch['style1']}}">
         </div>
-             </td><td>
+             </td></tr>
+             <tr><td>
         <div class="form-group mb-2">
             <label for="style2">Style 2</label>
             <input type="text" class="form-control" name="style2" placeholder="Style 2" value="{{$watch['style2']}}">
         </div>
-             </td></tr>
-             <tr><td>
+             </td><td>
         <div class="form-group mb-2">
             <label for="style3">Style 3</label>
             <input type="text" class="form-control" name="style3" placeholder="Style 3" value="{{$watch['style3']}}">
