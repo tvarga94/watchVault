@@ -53,7 +53,7 @@ Route::prefix('canvas-ui')->group(function () {
 });
 
 
-Route::get('/watch', [WatchController::class, 'index']);
+Route::get('/watch', [WatchController::class, 'index'])->name('watch');
 Route::post('/watch/addWatch', [WatchController::class, 'add']);
 Route::get('/watch/delete/{id}', [WatchController::class, 'delete']);
 Route::get('/watch/edit/{id}', [WatchController::class, 'edit']);

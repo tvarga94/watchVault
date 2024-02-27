@@ -12,58 +12,76 @@
     </script>
 </head>
 <body>
-<div class="container mt-5">
+<div class="container mt-5" style="text-align: center">
+    <h2> Add new watch</h2>
     <form method="POST" action="watch/addWatch">
         @csrf
+        <table>
+            <tr><td>
         <div class="form-group mb-2">
             <label for="brand">Brand</label>
-            <input type="text" class="form-control" name="brand" placeholder="Enter brand name">
+            <input type="text" class="form-control" name="brand">
         </div>
+            </td><td>
         <div class="form-group mb-2">
             <label for="model">Model</label>
-            <input type="text" class="form-control" name="model" placeholder="Enter model name">
+            <input type="text" class="form-control" name="model">
         </div>
+            </td><td>
         <div class="form-group mb-2">
             <label for="Image">Image</label>
-            <input type="text" class="form-control" name="image" placeholder="Image">
+            <input type="checkbox" class="form-control" name="image" value="1">
         </div>
+             </td></tr>
+             <tr><td>
         <div class="form-group mb-2">
             <label for="Price">Price</label>
-            <input type="text" class="form-control" name="price" placeholder="Price">
+            <input type="text" class="form-control" name="price">
         </div>
+             </td><td>
         <div class="form-group mb-2">
             <label for="PriceRange">Price Range Brand Class</label>
-            <input type="text" class="form-control" name="price_range_brand_class" placeholder="Enter Price Range Branc Class">
+            <input type="text" class="form-control" name="price_range_brand_class">
         </div>
+              </td><td>
         <div class="form-group mb-2">
             <label for="movement">Movement</label>
-            <input type="text" class="form-control" name="movement" placeholder="Enter movement">
+            <input type="text" class="form-control" name="movement">
         </div>
+            </td></tr>
+            <tr><td>
         <div class="form-group mb-2">
             <label for="functionality">Functionality</label>
-            <input type="text" class="form-control" name="functionality" placeholder="Enter functionality">
+            <input type="text" class="form-control" name="functionality">
         </div>
+            </td><td>
         <div class="form-group mb-2">
             <label for="style1">Style 1</label>
-            <input type="text" class="form-control" name="style1" placeholder="Style 1">
+            <input type="text" class="form-control" name="style1">
         </div>
+            </td><td>
         <div class="form-group mb-2">
             <label for="style2">Style 2</label>
-            <input type="text" class="form-control" name="style2" placeholder="Style 2">
+            <input type="text" class="form-control" name="style2">
         </div>
+            </td></tr>
+            <tr><td>
         <div class="form-group mb-2">
             <label for="style3">Style 3</label>
-            <input type="text" class="form-control" name="style3" placeholder="Style 3">
+            <input type="text" class="form-control" name="style3">
         </div>
+            </td><td>
         <div class="form-group mb-2">
             <label for="style4">Style 4</label>
-            <input type="text" class="form-control" name="style4" placeholder="Style 4">
+            <input type="text" class="form-control" name="style4">
         </div>
+            </td><td>
         <div class="form-group mb-2">
             <label for="style5">Style 5</label>
-            <input type="text" class="form-control" name="style5" placeholder="Style 5">
+            <input type="text" class="form-control" name="style5">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+            </td></tr></table>
+        <button type="submit" class="btn btn-primary">Add</button>
     </form>
     <table class="table mt-5">
         <thead>

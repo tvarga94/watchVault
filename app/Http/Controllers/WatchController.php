@@ -3,53 +3,50 @@
 namespace App\Http\Controllers;
 
 use App\Models\Watch;
+use App\Repositories\WatchRepository;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class WatchController extends Controller
 {
-    public function index()
+    public WatchRepository $watchRepository;
+    public function __construct(WatchRepository $watchRepository)
     {
-        $watches = Watch::all();
+        $this->watchRepository = $watchRepository;
+    }
+
+    public function index(): View
+    {
+        $watches = $this->watchRepository->index();
 
         return view('watch/main')->with("watches",$watches);
     }
 
     public function add(Request $request): RedirectResponse
     {
-        Watch::create($request->post());
+        $this->watchRepository->add($request);
 
         return redirect()->back();
     }
 
-    public function delete(Request $request){
-        $watch = Watch::find($request->id);
-        $watch->delete();
+    public function delete(Request $request): RedirectResponse
+    {
+        $this->watchRepository->delete($request);
 
         return redirect()->back();
     }
 
-    public function edit(Request $request){
-        $watch = Watch::find($request->id);
+    public function edit(Request $request): View
+    {
+        $watch = $this->watchRepository->edit($request);
 
         return view('watch/edit')->with("watch",$watch);
     }
 
-    public function update(Request $request){
-        $watch = Watch::find($request->id);
-        $watch->update([
-            'brand' => $request->brand,
-            'model' => $request->model,
-            'image' => $request->image,
-            'price_range_brand_class' => $request->price_range_brand_class,
-            'movement' => $request->movement,
-            'functionality' => $request->functionality,
-            'style1' => $request->style1,
-            'style2' => $request->style2,
-            'style3' => $request->style3,
-            'style4' => $request->style4,
-            'style5' => $request->style5,
-        ]);
+    public function update(Request $request): RedirectResponse
+    {
+        $this->watchRepository->update($request);
 
         return redirect()->back();
     }
