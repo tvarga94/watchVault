@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CanvasUiController;
+use App\Http\Controllers\ExcelController;
 use App\Http\Controllers\WatchController;
 use Illuminate\Support\Facades\Route;
 
@@ -58,3 +59,6 @@ Route::post('/watch/addWatch', [WatchController::class, 'add']);
 Route::get('/watch/delete/{id}', [WatchController::class, 'delete']);
 Route::get('/watch/edit/{id}', [WatchController::class, 'edit']);
 Route::post('/watch/edit/{id}', [WatchController::class, 'update']);
+
+Route::get('watch/import', [ExcelController::class,'import']);
+Route::get('watch/export', [ExcelController::class,'export']);
