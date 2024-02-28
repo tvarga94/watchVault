@@ -15,16 +15,16 @@ return new class extends Migration
             $table->id();
             $table->string('brand');
             $table->string('model');
-            $table->boolean('image');
-            $table->string('price');
-            $table->string('price_range_brand_class');
-            $table->string('movement');
-            $table->string('functionality');
-            $table->string('style1');
-            $table->string('style2');
-            $table->string('style3');
-            $table->string('style4');
-            $table->string('style5');
+            $table->boolean('image')->nullable();
+            $table->string('price')->nullable();
+            $table->string('price_range_brand_class')->nullable();
+            $table->string('movement')->nullable();
+            $table->string('functionality')->nullable();
+            $table->string('style1')->nullable();
+            $table->string('style2')->nullable();
+            $table->string('style3')->nullable();
+            $table->string('style4')->nullable();
+            $table->string('style5')->nullable();
             $table->timestamps();
         });
     }

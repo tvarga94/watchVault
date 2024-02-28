@@ -17,18 +17,18 @@ class WatchDataImport implements ToModel, WithHeadingRow
     public function model(array $row): Model|Watch|null
     {
         return new Watch([
-            'brand' => $row['brand'],
-            'model' => $row['model'],
-            'image' => $row['image'],
-            'price' => $row['price'],
-            'price_range_brand_class' => $row['price_range_brand_class'],
-            'movement' => $row['movement'],
-            'functionality' => $row['functionality'],
-            'style1' => $row['style1'],
-            'style2' => $row['style2'],
-            'style3' => $row['style3'],
-            'style4' => $row['style4'],
-            'style5' => $row['style5'],
+            'brand' => (string) $row['brand'],
+            'model' => (string) $row['model'],
+            'image' => (string) $row['image'] ?? null,
+            'price' => (string) $row['price'] ?? null,
+            'price_range_brand_class' => (string) $row['price_range_brand_class'] ?? null,
+            'movement' => (string) $row['movement'] ?? null,
+            'functionality' => (string) $row['functionality'] ?? null,
+            'style1' => (string) $row['style1'] ?? null,
+            'style2' => (string) $row['style2'] ?? null,
+            'style3' => (string) $row['style3'] ?? null,
+            'style4' => (string) $row['style4'] ?? null,
+            'style5' => (string) $row['style5'] ?? null,
         ]);
     }
 
