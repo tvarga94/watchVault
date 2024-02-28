@@ -11,7 +11,7 @@ class ExcelController extends Controller
 {
     public function import(): void
     {
-        Excel::import(new WatchDataImport(), 'watchData.xlsx');
+        Excel::import(new WatchDataImport(), 'proba.xlsx');
     }
 
     public function export(): BinaryFileResponse

@@ -3,16 +3,18 @@
 namespace App\Imports;
 
 use App\Models\Watch;
+use Illuminate\Database\Eloquent\Model;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class WatchDataImport implements ToModel
+class WatchDataImport implements ToModel, WithHeadingRow
 {
     /**
     * @param array $row
     *
     * @return \Illuminate\Database\Eloquent\Model|null
     */
-    public function model(array $row)
+    public function model(array $row): Model|Watch|null
     {
         return new Watch([
             'brand' => $row['brand'],
