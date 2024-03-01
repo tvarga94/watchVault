@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CanvasUiController;
 use App\Http\Controllers\ExcelController;
+use App\Http\Controllers\OptionsController;
 use App\Http\Controllers\WatchController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,8 +29,6 @@ Route::get('about', function () {
     return view('contact/about');
 });
 
-Route::get('proba/{slug}', [CanvasUiController::class, 'getAllPostsWithSpecificTopic']);
-
 Route::prefix('canvas-ui')->group(function () {
     Route::prefix('api')->group(function () {
         Route::get('posts', [CanvasUiController::class, 'getPosts']);
@@ -53,6 +52,8 @@ Route::prefix('canvas-ui')->group(function () {
          ->name('canvas-ui');
 });
 
+
+Route::get('/options', [OptionsController::class, 'index']);
 
 Route::get('/watch', [WatchController::class, 'index'])->name('watch');
 Route::post('/watch/addWatch', [WatchController::class, 'add']);
