@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/jqueryui/custom.css') }}"  type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/js/plugins/flexslider/flexslider.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/tooltipster.css') }}" type="text/css" media="all" />
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('assets/css/styleNEW.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/grid.css') }}" type="text/css" media="all" />
 

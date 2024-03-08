@@ -1,3 +1,16 @@
+// Menucode
+var menutogglebutton = document.querySelector('.toggle_button');
+menutogglebutton.addEventListener('click', ()=>{
+	var menu = document.getElementById("main_menu");
+	menu.classList.toggle('active');
+	if(menu.classList.contains('active')){
+		document.getElementById("toggleicon").innerHTML = "close"
+	}else{
+		document.getElementById("toggleicon").innerHTML = "menu"
+	}
+})
+
+
 if(jQuery('#pp_page_title_img_blur').val()!='') {
 	(function() {
 	  jQuery(window).scroll(function() {

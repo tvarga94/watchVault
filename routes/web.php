@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CanvasUiController;
 use App\Http\Controllers\ExcelController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\OptionsController;
 use App\Http\Controllers\WatchController;
 use Illuminate\Support\Facades\Route;
@@ -17,17 +18,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('contact', function () {
-    return view('contact/contact');
-});
-
-Route::get('about', function () {
-    return view('contact/about');
-});
+Route::get('/', [FrontendController::class, 'showMainPage']);
+Route::get('/contact', [FrontendController::class, 'showMainPage']);
+Route::get('/about', [FrontendController::class, 'showAboutPage']);
 
 Route::prefix('canvas-ui')->group(function () {
     Route::prefix('api')->group(function () {
@@ -54,6 +48,7 @@ Route::prefix('canvas-ui')->group(function () {
 
 
 Route::get('/options', [OptionsController::class, 'index']);
+Route::post('/options/store', [OptionsController::class, 'store']);
 
 Route::get('/watch', [WatchController::class, 'index'])->name('watch');
 Route::post('/watch/addWatch', [WatchController::class, 'add']);
@@ -63,3 +58,4 @@ Route::post('/watch/edit/{id}', [WatchController::class, 'update']);
 
 Route::get('watch/import', [ExcelController::class,'import']);
 Route::get('watch/export', [ExcelController::class,'export']);
+

@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('popular_posts', function (Blueprint $table) {
             $table->id();
-            $table->integer('canvas_posts_id');
+            $table->longText('canvas_posts_id');
+            $table->string('place');
             $table->timestamps();
         });
     }

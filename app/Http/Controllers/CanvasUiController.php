@@ -28,14 +28,6 @@ class CanvasUiController extends Controller
         ]);
     }
 
-    public function getAllPostsWithSpecificTopic(Request $request, $slug)
-    {
-
-        $topic = Topic::firstWhere('slug', $slug);
-
-        return $topic ? response()->json($topic->posts()->with('topic', 'user')->paginate(), 200) : response()->json(null, 200);
-    }
-
     /**
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Pagination\LengthAwarePaginator

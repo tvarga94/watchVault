@@ -13,20 +13,50 @@
 </head>
 <body>
 <div class="container mt-5" style="text-align: center">
-
     <h1>Select an Article</h1>
-    <form action="/articles/show" method="GET">
+    <form action="/options/store" method="POST">
         @csrf
         <h2><label for="article_id">Set the popular posts</label></h2><br />
-        <select name="article_id" id="article_id">
-        {{dump($posts)}}
+        <h2><label for="article_id">Main Article</label></h2><br />
+        <select name="popular_posts_main">
             @foreach($posts as $post)
-
-                <option value="{{ $post['id'] }}">{{ $post['brand'] }}</option>
+                <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>
             @endforeach
         </select>
+        <button type="submit">Save</button>
+    </form>
 
-        <button type="submit">Show Article</button>
+    <form action="/options/store" method="POST">
+        @csrf
+        <h2><label for="article_id">1st Side Article</label></h2><br />
+        <select name="popular_posts_first">
+            @foreach($posts as $post)
+                <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>
+            @endforeach
+        </select>
+        <button type="submit">Save</button>
+    </form>
+
+    <form action="/options/store" method="POST">
+        @csrf
+        <h2><label for="article_id">2nd Side Article</label></h2><br />
+        <select name="popular_posts_second">
+            @foreach($posts as $post)
+                <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>
+            @endforeach
+        </select>
+        <button type="submit">Save</button>
+    </form>
+
+    <form action="/options/store" method="POST">
+        @csrf
+        <h2><label for="article_id">3rd Side Article</label></h2><br />
+        <select name="popular_posts_third">
+            @foreach($posts as $post)
+                <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>
+            @endforeach
+        </select>
+        <button type="submit">Save</button>
     </form>
 </div>
 </body>
