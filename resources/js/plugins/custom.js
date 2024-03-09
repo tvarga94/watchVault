@@ -85,14 +85,6 @@ jQuery(document).ready(function(){
 		}
 	});
 
-	var isDisableRightClick = jQuery('#pp_enable_right_click').val();
-
-	if(isDisableRightClick!='')
-	{
-		jQuery(this).bind("contextmenu", function(e) {
-	    	e.preventDefault();
-	    });
-	}
 
 	function rePortfolioLayout() {
 

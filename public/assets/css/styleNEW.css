@@ -453,7 +453,7 @@ a {
     .section_2 .container .other-divs .innercolumns {
         flex: 0 0 100%;
         max-width: 100%;
-        
+
     }
 }
 
@@ -466,7 +466,7 @@ a {
         max-width: 100%;
         object-fit: cover;
         object-position: center;
-        
+
     }
 
     .section_2 .container .main-div .card_body {
@@ -490,6 +490,7 @@ a {
     border-bottom: 1px solid #000;
     line-height: 0.1em;
     margin: 10px auto 20px;
+    width: 100%;
 }
 
 .text_line span {

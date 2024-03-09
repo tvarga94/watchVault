@@ -14,13 +14,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-
+            CanvasPostSeeder::class,
+            CanvasTagsSeeder::class,
+            CanvasTopicsSeeder::class,
+            CanvasPostsTagsSeeder::class,
+            CanvasPostsTopicsSeeder::class,
+            CanvasViewsSeeder::class,
+            CanvasVisitsSeeder::class
         ]);
-        // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 }
