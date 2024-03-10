@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <link rel="shortcut icon" href="assets/upload/TG-Thumb.png" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon/favicon.png')  }}" />
 
     <title>Grand Blog | Responsive Blog Template</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -27,22 +27,21 @@
 <!-- Begin mobile menu -->
 <div class="header_style_wrapper">
     <!-- End top bar -->
-
     <div class="top_bar">
         <div id="menu_wrapper">
             <div class="social_wrapper">
                 <ul>
                     <li class="facebook">
-                        <a href="https://www.tiktok.com/@thewatchvault_official"><i class="fa fa-ticket"></i></a>
+                        <a href="https://www.tiktok.com/@thewatchvault_official"><img src="assets/images/icon/tiktok.png" /></a>
                     </li>
-                    <li class="twitter">
-                        <a href="https://youtube.com/@thewatchvault_official"><i class="fa fa-youtube-play"></i></a>
+                    <li class="youtube">
+                        <a href="https://youtube.com/@thewatchvault_official"><img src="assets/images/icon/youtube.png" /></a>
                     </li>
                     <li class="pinterest">
-                        <a title="Pinterest" href="https://pin.it/3B2TkrumK"><i class="fa fa-pinterest"></i></a>
+                        <a title="Pinterest" href="https://pin.it/3B2TkrumK"><img src="assets/images/icon/pinterest.png" /></a>
                     </li>
                     <li class="instagram">
-                        <a title="Instagram" href="#"><i class="fa fa-instagram"></i></a>
+                        <a title="Instagram" href="https://pin.it/3B2TkrumK"><img src="assets/images/icon/instagram.png" /></a>
                     </li>
                 </ul>
             </div>
@@ -75,11 +74,11 @@
 
 <!-- Begin logo -->
 <div id="logo_wrapper">
-    LOGO
+    <img src="assets/logo.png" alt="" height="85" width="80" style="padding-top: 1%"/>
     <div id="logo_normal" class="logo_container">
         <div class="logo_align">
             <a id="custom_logo" class="logo_wrapper default" href="index.html">
-                <img src="assets/images/logo@2x.png" alt="" width="252" height="108" />
+                <img src="assets/twv01.png" alt=""/>
             </a>
         </div>
     </div>
@@ -91,8 +90,7 @@
     <div class="flexslider" data-height="550">
         <ul class="slides">
             <li>
-                    <div class="slider_image" style="background-image: url('assets/upload/photo-1437915015400-137312b61975.jpg');"></div>
-                </a>
+                    <div class="slider_image" style="background-image: url('assets/images/banner/banner1.1.png');"></div>
                 <div class="slide_post">
                     <div class="post_info_cat">
                                 <span>
@@ -110,7 +108,7 @@
             </li>
             <li>
                 <a href="singleblog.html">
-                    <div class="slider_image" style="background-image: url('assets/upload/33.jpg');"></div>
+                    <div class="slider_image" style="background-image: url('assets/images/banner/banner2.png');"></div>
                 </a>
                 <div class="slide_post">
                     <div class="post_info_cat">
@@ -129,7 +127,7 @@
             </li>
             <li>
                 <a href="singleblog.html">
-                    <div class="slider_image" style="background-image: url('assets/upload/15.jpg');"></div>
+                    <div class="slider_image" style="background-image: url('assets/images/banner/banner3.png');"></div>
                 </a>
                 <div class="slide_post">
                     <div class="post_info_cat">
@@ -150,7 +148,7 @@
     </div>
 </div>
 
-<hr />
+<!-- First Section -->
 <div id= "first" class="section_1">
     <h3 class="text_line"><span>POPULAR ARTICLES</span></h3>
     <div class="container">
@@ -270,14 +268,9 @@
             <div class="card_body">
                 <div class="card-content">
                     <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services">The
-                            Best
-                            VPN Services to use in 2024 | Top VPN Providers for all Devices Tested</a></h3>
-                    <p class="card-text">The VPN market is full of services claiming to be the most secure, the
-                        fastest,
-                        or the best around. So, who can you trust? We've reviewed over 140 different VPN services to
-                        find the best. This guide will help you cut through the noise to see which VPNs are at the
-                        top
-                        of the pecking order.</p>
+                            {{ $latestPosts[0]['title'] }}
+                            </a></h3>
+                    <p class="card-text">{{ $latestPosts[0]['summary'] }}</p>
                 </div>
                 <footer class="card-meta">
                     <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -290,20 +283,20 @@
                                   d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                             </path>
                         </svg></dt>
-                    <dd>October 13, 2023</dd>
+                    <dd>{{ $latestPosts[0]['created_at'] }}</dd>
                 </footer>
             </div>
         </div>
         <div class="columns">
-            <!-- col1 -->
+            @foreach($latestPosts as $key => $lastestPost)
+                @if($key > 0)
             <div class="innercolumns">
                 <img
                     src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
                 <div class="card-body">
                     <div class="card-content">
                         <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
+                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $lastestPost['title'] }}</a></h3>
                     </div>
                     <footer class="card-meta">
                         <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -315,58 +308,12 @@
                                       d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                 </path>
                             </svg></dt>
-                        <dd>May 2, 2023</dd>
+                        <dd>{{ $lastestPost['created_at'] }}</dd>
                     </footer>
                 </div>
             </div>
-            <!-- col2 -->
-            <div class="innercolumns">
-                <img
-                    src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
-                <div class="card-body">
-                    <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
-                    </div>
-                    <footer class="card-meta">
-                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 512 512">
-                                <title>Last Updated Date</title>
-                                <path style="fill:#5c7099;"
-                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
-                                <path style="fill:#5c7099;"
-                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
-                                </path>
-                            </svg></dt>
-                        <dd>May 2, 2023</dd>
-                    </footer>
-                </div>
-            </div>
-            <!-- col3 -->
-            <div class="innercolumns">
-                <img
-                    src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
-                <div class="card-body">
-                    <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
-                    </div>
-                    <footer class="card-meta">
-                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 512 512">
-                                <title>Last Updated Date</title>
-                                <path style="fill:#5c7099;"
-                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
-                                <path style="fill:#5c7099;"
-                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
-                                </path>
-                            </svg></dt>
-                        <dd>May 2, 2023</dd>
-                    </footer>
-                </div>
-            </div>
+                @endif
+            @endforeach
         </div>
     </div>
 </div>
@@ -549,6 +496,7 @@
         </div>
     </div>
 </div>
+@include('instagram')
 @include('footer')
 <div id="overlay_background"></div>
 

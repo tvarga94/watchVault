@@ -68,6 +68,7 @@
 
 	#menu_wrapper .social_wrapper {
 		left: 90px;
+        top: 15px;
 	}
 
 	#logo_right_button {
@@ -76,9 +77,9 @@
 }
 
 
-/* 
+/*
 #Tablet (Landscape)
-================================================== 
+==================================================
 */
 
 @media only screen and (min-width: 960px) and (max-width: 1099px) {
@@ -92,9 +93,9 @@
 }
 
 
-/* 
+/*
 #Tablet (Portrait)
-================================================== 
+==================================================
 */
 
 @media only screen and (min-width: 768px) and (max-width: 960px) {
@@ -783,9 +784,9 @@ blockquote {
 }
 }
 
-/*  
+/*
 #Mobile (Portrait)
-================================================== 
+==================================================
 */
 
 @media only screen and (max-width: 767px) {
@@ -1867,9 +1868,9 @@ body.js_nav #overlay_background {
 }
 }
 
-/* 
+/*
 #Mobile (Landscape)
-================================================== 
+==================================================
 */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -1921,7 +1922,7 @@ body.js_nav #overlay_background {
 }
 #menu_wrapper .nav ul.active, #menu_wrapper div .nav.active{
 	left: 0px;
-}	
+}
 .header_style_wrapper.nofixed{
 	display: flex;
 }

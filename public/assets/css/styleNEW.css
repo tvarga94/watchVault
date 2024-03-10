@@ -131,10 +131,6 @@ a{
     }
 }
 
-
-
-
-
 /* footer  */
 *{
     padding: 0;
@@ -145,9 +141,9 @@ body{
     margin: 0;
 }
 .footer {
-    background: #2e2e2e;
+    background-image: url("../images/footer/1.png");
+    background-size: cover;
     color: #fff;
-    font-family: Work Sans,Helvetica,Arial,sans-serif;
     padding: 2.7rem 0
 }
 
@@ -501,4 +497,45 @@ a {
 .section_1 .container .columns:nth-child(1) img{
     max-height: 242px;
     object-fit: cover;
+}
+
+.footer_container {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer_container h2, h4 {
+    color: white;
+}
+
+input[type=text], input[type=submit] {
+    width: 50%; /* Shorter width */
+    padding: 12px;
+    margin: 8px auto; /* Centered */
+    display: block; /* Change to block for auto margin to work */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=checkbox] {
+    margin-top: 16px;
+}
+
+input[type=submit] {
+    color: white;
+    border: none;
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+.checkbox-container {
+    display: block;
+    text-align: center; /* Center the checkbox label */
+}
+
+.holder {
+    padding: 2%;
 }
