@@ -370,11 +370,6 @@ a {
     text-decoration: none;
 }
 
-.section_2 {
-    padding: 50px 20px;
-    width: 100%;
-}
-
 .section_2 .container {
     max-width: 1280px;
     margin: auto;
@@ -481,16 +476,14 @@ a {
 }
 
 .text_line {
-    width: 1280px;
     text-align: center;
     border-bottom: 1px solid #000;
     line-height: 0.1em;
-    margin: 10px auto 20px;
     width: 100%;
 }
 
 .text_line span {
-    background:#fff;
+    background: #f5f7fa;
     padding:0 10px;
 }
 
