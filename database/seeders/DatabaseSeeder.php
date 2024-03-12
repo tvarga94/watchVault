@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             CanvasPostsTagsSeeder::class,
             CanvasPostsTopicsSeeder::class,
             CanvasViewsSeeder::class,
-            CanvasVisitsSeeder::class
+            CanvasVisitsSeeder::class,
+            PopularPostsSeeder::class
         ]);
 
     }

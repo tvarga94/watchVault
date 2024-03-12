@@ -28,13 +28,22 @@ class OptionsController
                 $popularPost->save();
                 break;
             case 'popular_posts_first':
-                //code block;
+                $article = Post::find($request->popular_posts_first);
+                $popularPost = PopularPost::where('place', 'first')->first();
+                $popularPost->canvas_posts_id = $article->id;
+                $popularPost->save();
                 break;
             case 'popular_posts_second':
-                //code block
+                $article = Post::find($request->popular_posts_main);
+                $popularPost = PopularPost::where('place', 'second')->first();
+                $popularPost->canvas_posts_id = $article->id;
+                $popularPost->save();
                 break;
             case 'popular_posts_thrid':
-                //code block
+                $article = Post::find($request->popular_posts_main);
+                $popularPost = PopularPost::where('place', 'third')->first();
+                $popularPost->canvas_posts_id = $article->id;
+                $popularPost->save();
                 break;
             default:
                 //code block

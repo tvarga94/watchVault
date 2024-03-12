@@ -17,7 +17,7 @@
     <form action="/options/store" method="POST">
         @csrf
         <h2><label for="article_id">Set the popular posts</label></h2><br />
-        <h2><label for="article_id">Main Article</label></h2><br />
+        <h2><label for="article_id">Main Article</label></h2>
         <select name="popular_posts_main">
             @foreach($posts as $post)
                 <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>
@@ -28,7 +28,7 @@
 
     <form action="/options/store" method="POST">
         @csrf
-        <h2><label for="article_id">1st Side Article</label></h2><br />
+        <h2><label for="article_id">1st Side Article</label></h2>
         <select name="popular_posts_first">
             @foreach($posts as $post)
                 <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>
@@ -39,7 +39,7 @@
 
     <form action="/options/store" method="POST">
         @csrf
-        <h2><label for="article_id">2nd Side Article</label></h2><br />
+        <h2><label for="article_id">2nd Side Article</label></h2>
         <select name="popular_posts_second">
             @foreach($posts as $post)
                 <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>
@@ -50,7 +50,7 @@
 
     <form action="/options/store" method="POST">
         @csrf
-        <h2><label for="article_id">3rd Side Article</label></h2><br />
+        <h2><label for="article_id">3rd Side Article</label></h2>
         <select name="popular_posts_third">
             @foreach($posts as $post)
                 <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>

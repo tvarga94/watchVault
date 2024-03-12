@@ -23,8 +23,6 @@
 
 <body data-rsssl="1" class="home blog">
 <!-- Begin mobile menu -->
-
-<!-- Begin mobile menu -->
 <div class="header_style_wrapper">
     <!-- End top bar -->
     <div class="top_bar">
@@ -86,7 +84,7 @@
 </div>
 
 <!-- main slider starts here -->
-<div id="post_featured_slider" class="slider_wrapper" style="margin-bottom: 2%">
+<div id="post_featured_slider" class="slider_wrapper">
     <div class="flexslider" data-height="550">
         <ul class="slides">
             <li>
@@ -149,24 +147,22 @@
 </div>
 
 <!-- Popular Articles -->
-
 <div class="section_2">
+    <div class="line_settings"><h3 class="text_line"><span>POPULAR ARTICLES</span></h3></div>
     <div class="container">
-        <h3 class="text_line"><span>POPULAR ARTICLES</span></h3>
         <div class="main-div">
-            <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
+            <img
+                src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services">The Best VPN Services to use in 2024 | Top VPN Providers for all Devices Tested</a></h3>
-                    <p class="card-text">The VPN market is full of services claiming to be the most secure, the
-                        fastest,
-                        or the best around. So, who can you trust? We've reviewed over 140 different VPN services to
-                        find the best. This guide will help you cut through the noise to see which VPNs are at the
-                        top
-                        of the pecking order.</p>
+                    <h3 class="card-title"><a
+                            href="https://proprivacy.com/vpn/comparison/best-vpn-services"></a>{{ $canvasPosts[0]['title'] }}
+                    </h3>
+                    <p class="card-text">{{ $canvasPosts[0]['title'] }}</p>
                 </div>
                 <footer class="card-meta">
-                    <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                    <dt>
+                        <svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 512 512">
                             <title>Last Updated Date</title>
                             <path style="fill:#5c7099;"
@@ -175,88 +171,48 @@
                             <path style="fill:#5c7099;"
                                   d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                             </path>
-                        </svg></dt>
-                    <dd>October 13, 2023</dd>
+                        </svg>
+                    </dt>
+                    <dd>{{ $canvasPosts[0]['created_at'] }}</dd>
                 </footer>
             </div>
         </div>
         <div class="other-divs">
-            <!-- col1 -->
-            <div class="innercolumns">
-                <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
-                <div class="card-body">
-                    <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
+            @foreach($canvasPosts as $key => $canvasPost)
+                @if($key > 0)
+                    <div class="innercolumns">
+                        <img
+                            src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                        <div class="card-body">
+                            <div class="card-content">
+                                <h3 class="card-title"><a
+                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $canvasPost['title'] }}</a></h3>
+                            </div>
+                            <footer class="card-meta">
+                                <dt>
+                                    <svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512">
+                                        <title>Last Updated Date</title>
+                                        <path style="fill:#5c7099;"
+                                              d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
+                                        <path style="fill:#5c7099;"
+                                              d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                                        </path>
+                                    </svg>
+                                </dt>
+                                <dd>{{ $canvasPost['created_at'] }}</dd>
+                            </footer>
+                        </div>
                     </div>
-                    <footer class="card-meta">
-                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 512 512">
-                                <title>Last Updated Date</title>
-                                <path style="fill:#5c7099;"
-                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
-                                <path style="fill:#5c7099;"
-                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
-                                </path>
-                            </svg></dt>
-                        <dd>May 2, 2023</dd>
-                    </footer>
-                </div>
-            </div>
-            <!-- col2 -->
-            <div class="innercolumns">
-                <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
-                <div class="card-body">
-                    <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
-                    </div>
-                    <footer class="card-meta">
-                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 512 512">
-                                <title>Last Updated Date</title>
-                                <path style="fill:#5c7099;"
-                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
-                                <path style="fill:#5c7099;"
-                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
-                                </path>
-                            </svg></dt>
-                        <dd>May 2, 2023</dd>
-                    </footer>
-                </div>
-            </div>
-            <!-- col3 -->
-            <div class="innercolumns">
-                <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
-                <div class="card-body">
-                    <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
-                    </div>
-                    <footer class="card-meta">
-                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 512 512">
-                                <title>Last Updated Date</title>
-                                <path style="fill:#5c7099;"
-                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
-                                <path style="fill:#5c7099;"
-                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
-                                </path>
-                            </svg></dt>
-                        <dd>May 2, 2023</dd>
-                    </footer>
-                </div>
-            </div>
+                @endif
+            @endforeach
         </div>
     </div>
 </div>
 
 <!-- Latest Articles -->
 <div id= "second" class="section_1">
-    <h3 class="text_line"><span>LATEST ARTICLES</span></h3>
+    <div class="line_settings"><h3 class="text_line"><span>LATEST ARTICLES</span></h3></div>
     <div class="container">
         <div class="columns">
             <img
@@ -316,22 +272,15 @@
 
 <!-- Latest Brand Articles -->
 <div id= "first" class="section_1">
-    <h3 class="text_line"><span>LATEST ARTICLES</span></h3>
+    <div class="line_settings"><h3 class="text_line"><span>LATEST BRAND ARTICLES</span></h3></div>
     <div class="container">
         <div class="columns">
             <img
                 src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services">The
-                            Best
-                            VPN Services to use in 2024 | Top VPN Providers for all Devices Tested</a></h3>
-                    <p class="card-text">The VPN market is full of services claiming to be the most secure, the
-                        fastest,
-                        or the best around. So, who can you trust? We've reviewed over 140 different VPN services to
-                        find the best. This guide will help you cut through the noise to see which VPNs are at the
-                        top
-                        of the pecking order.</p>
+                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services">{{ $brandPosts[0]['title'] }}</a></h3>
+                    <p class="card-text">{{ $brandPosts[0]['summary'] }}</p>
                 </div>
                 <footer class="card-meta">
                     <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -344,100 +293,55 @@
                                   d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                             </path>
                         </svg></dt>
-                    <dd>October 13, 2023</dd>
+                    <dd>{{ $brandPosts[0]['created_at'] }}</dd>
                 </footer>
             </div>
         </div>
         <div class="columns">
-            <!-- col1 -->
-            <div class="innercolumns">
-                <img
-                    src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
-                <div class="card-body">
-                    <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
+            @foreach($brandPosts as $key => $brandPost)
+                @if($key > 0)
+                    <div class="innercolumns">
+                        <img
+                            src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                        <div class="card-body">
+                            <div class="card-content">
+                                <h3 class="card-title"><a
+                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service"> {{ $brandPost['title'] }}</a></h3>
+                            </div>
+                            <footer class="card-meta">
+                                <dt>
+                                    <svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512">
+                                        <title>Last Updated Date</title>
+                                        <path style="fill:#5c7099;"
+                                              d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
+                                        <path style="fill:#5c7099;"
+                                              d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                                        </path>
+                                    </svg>
+                                </dt>
+                                <dd>{{ $brandPost['created_at'] }}</dd>
+                            </footer>
+                        </div>
                     </div>
-                    <footer class="card-meta">
-                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 512 512">
-                                <title>Last Updated Date</title>
-                                <path style="fill:#5c7099;"
-                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
-                                <path style="fill:#5c7099;"
-                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
-                                </path>
-                            </svg></dt>
-                        <dd>May 2, 2023</dd>
-                    </footer>
-                </div>
-            </div>
-            <!-- col2 -->
-            <div class="innercolumns">
-                <img
-                    src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
-                <div class="card-body">
-                    <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
-                    </div>
-                    <footer class="card-meta">
-                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 512 512">
-                                <title>Last Updated Date</title>
-                                <path style="fill:#5c7099;"
-                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
-                                <path style="fill:#5c7099;"
-                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
-                                </path>
-                            </svg></dt>
-                        <dd>May 2, 2023</dd>
-                    </footer>
-                </div>
-            </div>
-            <!-- col3 -->
-            <div class="innercolumns">
-                <img
-                    src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
-                <div class="card-body">
-                    <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
-                    </div>
-                    <footer class="card-meta">
-                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 512 512">
-                                <title>Last Updated Date</title>
-                                <path style="fill:#5c7099;"
-                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
-                                <path style="fill:#5c7099;"
-                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
-                                </path>
-                            </svg></dt>
-                        <dd>May 2, 2023</dd>
-                    </footer>
-                </div>
-            </div>
+                @endif
+            @endforeach
         </div>
     </div>
 </div>
 
-
-<h3>Second Third</h3>
+<!-- Latest Class Articles -->
 <div class="section_2">
+    <div class="line_settings"><h3 class="text_line"><span>LATEST CLASS ARTICLES</span></h3></div>
     <div class="container">
         <div class="other-divs">
-            <!-- col1 -->
+            @foreach($classPosts as $classPost)
             <div class="innercolumns">
                 <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
                 <div class="card-body">
                     <div class="card-content">
                         <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
+                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $classPost['title'] }}</a></h3>
                     </div>
                     <footer class="card-meta">
                         <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -449,59 +353,159 @@
                                       d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                 </path>
                             </svg></dt>
-                        <dd>May 2, 2023</dd>
+                        <dd>{{ $classPost['created_at'] }}</dd>
                     </footer>
                 </div>
             </div>
-            <!-- col2 -->
-            <div class="innercolumns">
-                <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
-                <div class="card-body">
-                    <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
-                    </div>
-                    <footer class="card-meta">
-                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 512 512">
-                                <title>Last Updated Date</title>
-                                <path style="fill:#5c7099;"
-                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
-                                <path style="fill:#5c7099;"
-                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
-                                </path>
-                            </svg></dt>
-                        <dd>May 2, 2023</dd>
-                    </footer>
-                </div>
-            </div>
-            <!-- col3 -->
-            <div class="innercolumns">
-                <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
-                <div class="card-body">
-                    <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">The cheapest VPN
-                                services if you're on a budget</a></h3>
-                    </div>
-                    <footer class="card-meta">
-                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 512 512">
-                                <title>Last Updated Date</title>
-                                <path style="fill:#5c7099;"
-                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
-                                <path style="fill:#5c7099;"
-                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
-                                </path>
-                            </svg></dt>
-                        <dd>May 2, 2023</dd>
-                    </footer>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
+
+<!-- Latest Movement Articles -->
+<div class="section_2">
+    <div class="line_settings"><h3 class="text_line"><span>LATEST MOVEMENT ARTICLES</span></h3></div>
+    <div class="container">
+        <div class="other-divs">
+            @foreach($movementPosts as $movementPost)
+                <div class="innercolumns">
+                    <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                    <div class="card-body">
+                        <div class="card-content">
+                            <h3 class="card-title"><a
+                                    href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $movementPost['title'] }}</a></h3>
+                        </div>
+                        <footer class="card-meta">
+                            <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 512 512">
+                                    <title>Last Updated Date</title>
+                                    <path style="fill:#5c7099;"
+                                          d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
+                                    <path style="fill:#5c7099;"
+                                          d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                                    </path>
+                                </svg></dt>
+                            <dd>{{ $movementPost['created_at'] }}</dd>
+                        </footer>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</div>
+
+<!-- Latest Functionality Articles -->
+<div class="section_2">
+    <div class="line_settings"><h3 class="text_line"><span>POPULAR FUNCTIONALITY ARTICLES</span></h3></div>
+    <div class="container">
+        <div class="main-div">
+            <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
+            <div class="card_body">
+                <div class="card-content">
+                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services"> {{ $functionalityPosts[0]['title'] }}</a></h3>
+                    <p class="card-text">{{$functionalityPosts[0]['summary']}}</p>
+                </div>
+                <footer class="card-meta">
+                    <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 512 512">
+                            <title>Last Updated Date</title>
+                            <path style="fill:#5c7099;"
+                                  d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z">
+                            </path>
+                            <path style="fill:#5c7099;"
+                                  d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                            </path>
+                        </svg></dt>
+                    <dd>{{ $functionalityPosts[0]['created_at'] }}</dd>
+                </footer>
+            </div>
+        </div>
+        <div class="other-divs">
+            @foreach($functionalityPosts as $key => $functionalityPost)
+                @if($key > 0)
+            <div class="innercolumns">
+                <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                <div class="card-body">
+                    <div class="card-content">
+                        <h3 class="card-title"><a
+                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $functionalityPost['title'] }}</a></h3>
+                    </div>
+                    <footer class="card-meta">
+                        <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 512 512">
+                                <title>Last Updated Date</title>
+                                <path style="fill:#5c7099;"
+                                      d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
+                                <path style="fill:#5c7099;"
+                                      d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                                </path>
+                            </svg></dt>
+                        <dd>{{ $functionalityPost['created_at'] }}</dd>
+                    </footer>
+                </div>
+            </div>
+                @endif
+            @endforeach
+        </div>
+    </div>
+</div>
+
+<!-- Latest Style Articles -->
+<div class="section_2">
+    <div class="line_settings"><h3 class="text_line"><span>POPULAR STYLE ARTICLES</span></h3></div>
+    <div class="container">
+        <div class="main-div">
+            <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
+            <div class="card_body">
+                <div class="card-content">
+                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services"> {{ $stylePosts[0]['title'] }}</a></h3>
+                    <p class="card-text">{{$stylePosts[0]['summary']}}</p>
+                </div>
+                <footer class="card-meta">
+                    <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 512 512">
+                            <title>Last Updated Date</title>
+                            <path style="fill:#5c7099;"
+                                  d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z">
+                            </path>
+                            <path style="fill:#5c7099;"
+                                  d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                            </path>
+                        </svg></dt>
+                    <dd>{{ $stylePosts[0]['created_at'] }}</dd>
+                </footer>
+            </div>
+        </div>
+        <div class="other-divs">
+            @foreach($stylePosts as $key => $stylePost)
+                @if($key > 0)
+                    <div class="innercolumns">
+                        <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                        <div class="card-body">
+                            <div class="card-content">
+                                <h3 class="card-title"><a
+                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $stylePost['title'] }}</a></h3>
+                            </div>
+                            <footer class="card-meta">
+                                <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512">
+                                        <title>Last Updated Date</title>
+                                        <path style="fill:#5c7099;"
+                                              d="M32,456a24,24,0,0,0,24,24H456a24,24,0,0,0,24-24V192H32Z"></path>
+                                        <path style="fill:#5c7099;"
+                                              d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
+                                        </path>
+                                    </svg></dt>
+                                <dd>{{ $stylePost['created_at'] }}</dd>
+                            </footer>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
+        </div>
+    </div>
+</div>
+
 @include('instagram')
 @include('footer')
 <div id="overlay_background"></div>
