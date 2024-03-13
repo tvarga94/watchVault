@@ -13,6 +13,11 @@
 </head>
 <body>
 <div class="container mt-5" style="text-align: center">
+    @if(session('success'))
+        <div id="successMessage" style="background-color: #d4edda; color: #155724; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
+            {{ session('success') }}
+        </div>
+    @endif
     <h1>Select an Article</h1>
     <form action="/options/store" method="POST">
         @csrf
@@ -20,7 +25,7 @@
         <h2><label for="article_id">Main Article</label></h2>
         <select name="popular_posts_main">
             @foreach($posts as $post)
-                <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>
+                <option value="{{ $post['id'] }}" {{ $post['id'] == $mainArticleId ? 'selected' : '' }}>{{ $post['title'] }}</option>
             @endforeach
         </select>
         <button type="submit">Save</button>
@@ -31,7 +36,7 @@
         <h2><label for="article_id">1st Side Article</label></h2>
         <select name="popular_posts_first">
             @foreach($posts as $post)
-                <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>
+                <option value="{{ $post['id'] }}" {{ $post['id'] == $firstArticleId ? 'selected' : '' }}>{{ $post['title'] }}</option>
             @endforeach
         </select>
         <button type="submit">Save</button>
@@ -42,7 +47,7 @@
         <h2><label for="article_id">2nd Side Article</label></h2>
         <select name="popular_posts_second">
             @foreach($posts as $post)
-                <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>
+                <option value="{{ $post['id'] }}" {{ $post['id'] == $secondArticleId ? 'selected' : '' }}>{{ $post['title'] }}</option>
             @endforeach
         </select>
         <button type="submit">Save</button>
@@ -53,11 +58,19 @@
         <h2><label for="article_id">3rd Side Article</label></h2>
         <select name="popular_posts_third">
             @foreach($posts as $post)
-                <option value="{{ $post['id'] }}">{{ $post['title'] }}</option>
+                <option value="{{ $post['id'] }}" {{ $post['id'] == $thirdArticleId ? 'selected' : '' }}>{{ $post['title'] }}</option>
             @endforeach
         </select>
         <button type="submit">Save</button>
     </form>
 </div>
+<script>
+        setTimeout(function() {
+        var successMessage = document.getElementById('successMessage');
+        if (successMessage) {
+        successMessage.style.display = 'none';
+    }
+    }, 2000); // 5000 milliseconds = 5 seconds
+</script>
 </body>
 </html>

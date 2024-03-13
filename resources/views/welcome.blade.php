@@ -51,11 +51,56 @@
                                 <i class="material-icons" id="toggleicon">menu</i>
                             </button>
                             <ul id="main_menu" class="nav">
-                                <li><a href="singleblog.html">Brands</a></li>
-                                <li><a href="singleblog.html">Classes</a></li>
-                                <li><a href="singleblog.html">Movements</a></li>
-                                <li><a href="singleblog.html">Functionality</a></li>
-                                <li><a href="singleblog.html">Style</a></li>
+                                <li class="menu-item menu-item-has-children arrow">
+                                    <a href="singleblog.html">Brands</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="single-right_sidebar.html">Rolex</a></li>
+                                        <li class="menu-item"><a href="single-fullwidth.html">Tudor</a></li>
+                                        <li class="menu-item"><a href="single-left_sidebar.html">Seiko</a></li>
+                                        <li class="menu-item"><a href="beauty-of-nature.html">Casio</a></li>
+                                        <li class="menu-item"><a href="city-center-bridge.html">Hublot</a></li>
+                                        <li class="menu-item"><a href="golden-snow-land.html">Omega</a></li>
+                                        <li class="menu-item"><a href="golden-snow-land.html">All</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children arrow">
+                                    <a href="singleblog.html">Classes</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="single-right_sidebar.html">Cheap</a></li>
+                                        <li class="menu-item"><a href="single-fullwidth.html">Affordable</a></li>
+                                        <li class="menu-item"><a href="single-left_sidebar.html">Premium</a></li>
+                                        <li class="menu-item"><a href="beauty-of-nature.html">Luxory</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children arrow">
+                                    <a href="singleblog.html">Movement</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="single-right_sidebar.html">Mechanical</a></li>
+                                        <li class="menu-item"><a href="single-fullwidth.html">Automatic</a></li>
+                                        <li class="menu-item"><a href="single-left_sidebar.html">Quartz</a></li>
+                                        <li class="menu-item"><a href="beauty-of-nature.html">Solar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children arrow">
+                                    <a href="singleblog.html">Functionality</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="single-right_sidebar.html">Analog</a></li>
+                                        <li class="menu-item"><a href="single-fullwidth.html">Chronograph</a></li>
+                                        <li class="menu-item"><a href="single-left_sidebar.html">Digital</a></li>
+                                        <li class="menu-item"><a href="beauty-of-nature.html">Hybrid</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children arrow">
+                                    <a href="singleblog.html">STyle</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="single-right_sidebar.html">Aviator</a></li>
+                                        <li class="menu-item"><a href="single-fullwidth.html">Racing</a></li>
+                                        <li class="menu-item"><a href="single-left_sidebar.html">Diver</a></li>
+                                        <li class="menu-item"><a href="beauty-of-nature.html">Skeleton</a></li>
+                                        <li class="menu-item"><a href="beauty-of-nature.html">Wood</a></li>
+                                        <li class="menu-item"><a href="beauty-of-nature.html">Smart</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>

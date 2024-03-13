@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PopularPost;
 use Canvas\Models\Post;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 
@@ -11,43 +12,39 @@ class OptionsController
 {
     public function index(): View
     {
-       // $posts = Post::latest()->published()->with('user', 'topic')->paginate();
         $posts = Post::all();
+        $mainArticleId = PopularPost::where('place', 'main')->first()->canvas_posts_id;
+        $firstArticleId = PopularPost::where('place', 'first')->first()->canvas_posts_id;
+        $secondArticleId = PopularPost::where('place', 'second')->first()->canvas_posts_id;
+        $thirdArticleId = PopularPost::where('place', 'third')->first()->canvas_posts_id;
 
-        return view('options/main')->with("posts", $posts);
+        return view('options/main', [
+            'mainArticleId' => $mainArticleId,
+            'firstArticleId' => $firstArticleId,
+            'secondArticleId' => $secondArticleId,
+            'thirdArticleId' => $thirdArticleId,
+            'posts' => $posts]);
     }
 
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
+        $places = ['main', 'first', 'second', 'third'];
 
-        switch (true) {
-            case $request->has('popular_posts_main'):
-                $article = Post::find($request->popular_posts_main);
-                $popularPost = PopularPost::where('place', 'main')->first();
-                $popularPost->canvas_posts_id = $article->id;
-                $popularPost->save();
+        foreach ($places as $place) {
+            $inputKey = 'popular_posts_' . $place;
+
+            if ($request->has($inputKey)) {
+                $article = Post::find($request->input($inputKey));
+                $popularPost = PopularPost::where('place', $place)->first();
+
+                if ($article && $popularPost) {
+                    $popularPost->canvas_posts_id = $article->id;
+                    $popularPost->save();
+                }
                 break;
-            case 'popular_posts_first':
-                $article = Post::find($request->popular_posts_first);
-                $popularPost = PopularPost::where('place', 'first')->first();
-                $popularPost->canvas_posts_id = $article->id;
-                $popularPost->save();
-                break;
-            case 'popular_posts_second':
-                $article = Post::find($request->popular_posts_main);
-                $popularPost = PopularPost::where('place', 'second')->first();
-                $popularPost->canvas_posts_id = $article->id;
-                $popularPost->save();
-                break;
-            case 'popular_posts_thrid':
-                $article = Post::find($request->popular_posts_main);
-                $popularPost = PopularPost::where('place', 'third')->first();
-                $popularPost->canvas_posts_id = $article->id;
-                $popularPost->save();
-                break;
-            default:
-                //code block
+            }
         }
 
+        return redirect()->back()->with('success', 'Popular posts updated successfully!');
     }
 }
