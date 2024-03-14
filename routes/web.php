@@ -4,6 +4,7 @@ use App\Http\Controllers\CanvasUiController;
 use App\Http\Controllers\CustomLoginController;
 use App\Http\Controllers\ExcelController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\OptionsController;
 use App\Http\Controllers\WatchController;
 use Canvas\Http\Middleware\Authenticate;
@@ -27,6 +28,7 @@ Route::get('/about', [FrontendController::class, 'showAboutPage'])->name('about'
 Route::get('/advertising', [FrontendController::class, 'showAdvertisingPage'])->name('advertising');
 
 Route::post('/canvas/login', [CustomLoginController::class, 'store']);
+Route::post('/newsletter/store', [NewsletterController::class, 'store']);
 
 Route::prefix('canvas-ui')->group(function () {
     Route::prefix('api')->group(function () {

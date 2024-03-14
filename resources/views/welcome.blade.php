@@ -38,9 +38,9 @@
             <div class="card_body">
                 <div class="card-content">
                     <h3 class="card-title"><a
-                            href="https://proprivacy.com/vpn/comparison/best-vpn-services"></a>{{ $canvasPosts[0]['title'] }}
+                            href="https://proprivacy.com/vpn/comparison/best-vpn-services"></a>{{ $canvasPosts[0]['title'] ?? ''}}
                     </h3>
-                    <p class="card-text">{{ $canvasPosts[0]['title'] }}</p>
+                    <p class="card-text">{{ $canvasPosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
                     <dt>
@@ -55,7 +55,7 @@
                             </path>
                         </svg>
                     </dt>
-                    <dd>{{ $canvasPosts[0]['created_at'] }}</dd>
+                    <dd>{{ $canvasPosts[0]['created_at'] ?? ''}}</dd>
                 </footer>
             </div>
         </div>
@@ -68,7 +68,7 @@
                         <div class="card-body">
                             <div class="card-content">
                                 <h3 class="card-title"><a
-                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $canvasPost['title'] }}</a></h3>
+                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $canvasPost['title'] ?? ''}}</a></h3>
                             </div>
                             <footer class="card-meta">
                                 <dt>
@@ -82,7 +82,7 @@
                                         </path>
                                     </svg>
                                 </dt>
-                                <dd>{{ $canvasPost['created_at'] }}</dd>
+                                <dd>{{ $canvasPost['created_at'] ?? ''}}</dd>
                             </footer>
                         </div>
                     </div>
@@ -102,9 +102,9 @@
             <div class="card_body">
                 <div class="card-content">
                     <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services">The
-                            {{ $latestPosts[0]['title'] }}
+                            {{ $latestPosts[0]['title'] ?? ''}}
                         </a></h3>
-                    <p class="card-text">{{ $latestPosts[0]['summary'] }}</p>
+                    <p class="card-text">{{ $latestPosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
                     <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@
                                   d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                             </path>
                         </svg></dt>
-                    <dd>{{ $latestPosts[0]['created_at'] }}</dd>
+                    <dd>{{ $latestPosts[0]['created_at'] ?? ''}}</dd>
                 </footer>
             </div>
         </div>
@@ -130,7 +130,7 @@
                         <div class="card-body">
                             <div class="card-content">
                                 <h3 class="card-title"><a
-                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $lastestPost['title'] }}</a></h3>
+                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $lastestPost['title'] ?? ''}}</a></h3>
                             </div>
                             <footer class="card-meta">
                                 <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +142,7 @@
                                               d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                         </path>
                                     </svg></dt>
-                                <dd>{{ $lastestPost['created_at'] }}</dd>
+                                <dd>{{ $lastestPost['created_at'] ?? ''}}</dd>
                             </footer>
                         </div>
                     </div>
@@ -161,8 +161,8 @@
                 src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services">{{ $brandPosts[0]['title'] }}</a></h3>
-                    <p class="card-text">{{ $brandPosts[0]['summary'] }}</p>
+                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services">{{ $brandPosts[0]['title'] ?? ''}}</a></h3>
+                    <p class="card-text">{{ $brandPosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
                     <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +175,7 @@
                                   d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                             </path>
                         </svg></dt>
-                    <dd>{{ $brandPosts[0]['created_at'] }}</dd>
+                    <dd>{{ $brandPosts[0]['created_at'] ?? ''}}</dd>
                 </footer>
             </div>
         </div>
@@ -188,7 +188,7 @@
                         <div class="card-body">
                             <div class="card-content">
                                 <h3 class="card-title"><a
-                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service"> {{ $brandPost['title'] }}</a></h3>
+                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service"> {{ $brandPost['title'] ?? ''}}</a></h3>
                             </div>
                             <footer class="card-meta">
                                 <dt>
@@ -202,7 +202,7 @@
                                         </path>
                                     </svg>
                                 </dt>
-                                <dd>{{ $brandPost['created_at'] }}</dd>
+                                <dd>{{ $brandPost['created_at'] ?? ''}}</dd>
                             </footer>
                         </div>
                     </div>
@@ -223,7 +223,7 @@
                 <div class="card-body">
                     <div class="card-content">
                         <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $classPost['title'] }}</a></h3>
+                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $classPost['title'] ?? ''}}</a></h3>
                     </div>
                     <footer class="card-meta">
                         <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -235,7 +235,7 @@
                                       d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                 </path>
                             </svg></dt>
-                        <dd>{{ $classPost['created_at'] }}</dd>
+                        <dd>{{ $classPost['created_at'] ?? ''}}</dd>
                     </footer>
                 </div>
             </div>
@@ -255,7 +255,7 @@
                     <div class="card-body">
                         <div class="card-content">
                             <h3 class="card-title"><a
-                                    href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $movementPost['title'] }}</a></h3>
+                                    href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $movementPost['title'] ?? ''}}</a></h3>
                         </div>
                         <footer class="card-meta">
                             <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -267,7 +267,7 @@
                                           d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                     </path>
                                 </svg></dt>
-                            <dd>{{ $movementPost['created_at'] }}</dd>
+                            <dd>{{ $movementPost['created_at'] ?? ''}}</dd>
                         </footer>
                     </div>
                 </div>
@@ -284,8 +284,8 @@
             <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services"> {{ $functionalityPosts[0]['title'] }}</a></h3>
-                    <p class="card-text">{{$functionalityPosts[0]['summary']}}</p>
+                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services"> {{ $functionalityPosts[0]['title'] ?? '' }}</a></h3>
+                    <p class="card-text">{{$functionalityPosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
                     <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -298,7 +298,7 @@
                                   d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                             </path>
                         </svg></dt>
-                    <dd>{{ $functionalityPosts[0]['created_at'] }}</dd>
+                    <dd>{{ $functionalityPosts[0]['created_at'] ?? ''}}</dd>
                 </footer>
             </div>
         </div>
@@ -310,7 +310,7 @@
                 <div class="card-body">
                     <div class="card-content">
                         <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $functionalityPost['title'] }}</a></h3>
+                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $functionalityPost['title'] ?? ''}}</a></h3>
                     </div>
                     <footer class="card-meta">
                         <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -322,7 +322,7 @@
                                       d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                 </path>
                             </svg></dt>
-                        <dd>{{ $functionalityPost['created_at'] }}</dd>
+                        <dd>{{ $functionalityPost['created_at'] ?? ''}}</dd>
                     </footer>
                 </div>
             </div>
@@ -340,8 +340,8 @@
             <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services"> {{ $stylePosts[0]['title'] }}</a></h3>
-                    <p class="card-text">{{$stylePosts[0]['summary']}}</p>
+                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services"> {{ $stylePosts[0]['title'] ?? ''}}</a></h3>
+                    <p class="card-text">{{$stylePosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
                     <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -354,7 +354,7 @@
                                   d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                             </path>
                         </svg></dt>
-                    <dd>{{ $stylePosts[0]['created_at'] }}</dd>
+                    <dd>{{ $stylePosts[0]['created_at'] ?? ''}}</dd>
                 </footer>
             </div>
         </div>
@@ -366,7 +366,7 @@
                         <div class="card-body">
                             <div class="card-content">
                                 <h3 class="card-title"><a
-                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $stylePost['title'] }}</a></h3>
+                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $stylePost['title'] ?? ''}}</a></h3>
                             </div>
                             <footer class="card-meta">
                                 <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -378,7 +378,7 @@
                                               d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                         </path>
                                     </svg></dt>
-                                <dd>{{ $stylePost['created_at'] }}</dd>
+                                <dd>{{ $stylePost['created_at'] ?? ''}}</dd>
                             </footer>
                         </div>
                     </div>

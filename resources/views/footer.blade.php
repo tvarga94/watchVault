@@ -1,18 +1,18 @@
 <footer class="footer push-element">
-    <form action="/action_page.php">
+    <form id="newsletterForm" action="/newsletter/store" method="POST">
+        <div id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;text-align: center;font-size: large"></div>
+        @csrf
         <div class="footer_container">
             <h4>Stay up to date with the latest post and updates</h4>
             <h2>Subscribe to our Newsletter</h2>
         </div>
-
         <div class="holder">
             <input type="text" placeholder="Name" name="name" required>
-            <input type="text" placeholder="Email address" name="mail" required>
+            <input type="text" placeholder="Email address" name="email" required>
             <label class="checkbox-container">
-                <input type="checkbox" checked="checked" name="subscribe"> I agree to my personal data being stored and used to receive the newsletter or other updates about Watch Vault.
+                <input type="checkbox" checked="checked" name="subscribe" required> I agree to my personal data being stored and used to receive the newsletter or other updates about Watch Vault.
             </label>
         </div>
-
         <div class="holder">
             <input type="submit" value="Subscribe">
         </div>
@@ -120,3 +120,44 @@
         </div>
     </div>
 </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form from submitting the traditional way.
+
+            var formData = new FormData(this);
+
+            // Adjust the fetch URL as necessary. Make sure it matches your Laravel route.
+            fetch('/newsletter/store', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}' // Ensure CSRF token is included.
+                }
+            })
+                .then(response => response.json()) // Convert response to JSON.
+                .then(data => {
+                    console.log('Success:', data);
+
+                    // Display success message.
+                    var messageDiv = document.getElementById('subscriptionMessage');
+                    messageDiv.style.display = 'block'; // Make the message visible.
+                    messageDiv.textContent = 'Successful subscription! Thank you for subscribing.'; // Update with your message.
+
+                    // Clear the form fields.
+                    document.getElementById('newsletterForm').reset();
+
+                    // Hide the success message after 2 seconds.
+                    setTimeout(function() {
+                        messageDiv.style.display = 'none'; // Hide the message.
+                    }, 3000); // 3000 milliseconds = 3 seconds
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Optionally, handle errors and display an error message.
+                });
+        });
+    });
+</script>
+
