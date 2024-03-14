@@ -4,17 +4,19 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <link rel="shortcut icon" href="assets/upload/TG-Thumb.png" />
+    <link rel="shortcut icon" href="upload/TG-Thumb.png" />
 
     <title>Grand Blog | Responsive Blog Template</title>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/wordpress.css') }}" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/app.css" type="text/css" media="all" />
-    <link rel="stylesheet" href={{ asset('assets/css/magnific-popup.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('assets/css/animation.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/jqueryui/custom.css') }}"  type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/js/plugins/flexslider/flexslider.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/tooltipster.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/styleNEW.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/grid.css') }}" type="text/css" media="all" />
@@ -132,10 +134,10 @@
                             <h2 class="widgettitle">About Me</h2>
                             <div class="textwidget">
                                 <p>
-                                    <img src="assets/upload/aboutme.jpg" alt="" style="margin-bottom: 10px;" /><br />
+                                    <img src="upload/aboutme.jpg" alt="" style="margin-bottom: 10px;" /><br />
                                     Aliquam et elit eu nunc rhoncus viverra quis at felis et netus et malesuada fames ac turpis egestas. Aenean commodo ligula eget dolor.
                                 </p>
-                                <div style="margin-top: 20px; text-align: center;"><img src="assets/upload/signature.png" style="width: 173px; height: auto;" alt="" /></div>
+                                <div style="margin-top: 20px; text-align: center;"><img src="upload/signature.png" style="width: 173px; height: auto;" alt="" /></div>
                             </div>
                         </li>
                         <li id="grand_blog_instagram-5" class="widget Grand_Blog_Instagram">
@@ -144,7 +146,7 @@
                                 <li>
                                     <a target="_blank" href="https://www.instagram.com">
                                         <img
-                                            src="assets/upload/insta1.jpg"
+                                            src="upload/insta1.jpg"
                                             width="75"
                                             height="75"
                                             alt=""
@@ -154,7 +156,7 @@
                                 <li>
                                     <a target="_blank" href="https://www.instagram.com">
                                         <img
-                                            src="assets/upload/insta2.jpg"
+                                            src="upload/insta2.jpg"
                                             width="75"
                                             height="75"
                                             alt=""
@@ -164,7 +166,7 @@
                                 <li>
                                     <a target="_blank" href="https://www.instagram.com">
                                         <img
-                                            src="assets/upload/insta3.jpg"
+                                            src="upload/insta3.jpg"
                                             width="75"
                                             height="75"
                                             alt=""
@@ -174,7 +176,7 @@
                                 <li>
                                     <a target="_blank" href="https://www.instagram.com">
                                         <img
-                                            src="assets/upload/insta4.jpg"
+                                            src="upload/insta4.jpg"
                                             width="75"
                                             height="75"
                                             alt=""
@@ -184,7 +186,7 @@
                                 <li>
                                     <a target="_blank" href="https://www.instagram.com">
                                         <img
-                                            src="assets/upload/insta5.jpg"
+                                            src="upload/insta5.jpg"
                                             width="75"
                                             height="75"
                                             alt=""
@@ -194,7 +196,7 @@
                                 <li>
                                     <a target="_blank" href="https://www.instagram.com">
                                         <img
-                                            src="assets/upload/insta6.jpg"
+                                            src="upload/insta6.jpg"
                                             width="75"
                                             height="75"
                                             alt=""
@@ -353,7 +355,7 @@
         <div id="logo_normal" class="logo_container">
             <div class="logo_align">
                 <a id="custom_logo" class="logo_wrapper default" href="../index.htm">
-                    <img src="assets/images/logo@2x.png" alt="" width="252" height="108" />
+                    <img src="images/logo@2x.png" alt="" width="252" height="108" />
                 </a>
             </div>
         </div>
@@ -361,7 +363,7 @@
     </div>
 
     <div id="page_caption" class="hasbg parallax">
-        <div id="bg_regular" style="background-image: url(assets/upload/photo-1437915015400-137312b61975.jpg);"></div>
+        <div id="bg_regular" style="background-image: url(upload/photo-1437915015400-137312b61975.jpg);"></div>
     </div>
 
     <div class="page_title_wrapper">
@@ -393,7 +395,7 @@
                         </p>
                     </div>
                     <div id="attachment_483" style="width: 1450px;" class="wp-caption alignnone">
-                        <img aria-describedby="caption-attachment-483" loading="lazy" src="assets/upload/22.jpg" alt="Silver Lake" width="1440" height="960" class="size-full wp-image-483" />
+                        <img aria-describedby="caption-attachment-483" loading="lazy" src="upload/22.jpg" alt="Silver Lake" width="1440" height="960" class="size-full wp-image-483" />
                         <p id="caption-attachment-483" class="wp-caption-text">Silver Lake</p>
                     </div>
                     <div class="one_half" style="">
@@ -422,7 +424,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream1.jpg"
+                        src="upload/photostream1.jpg"
                         alt=""
                     />
                 </a>
@@ -430,7 +432,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream2.jpg"
+                        src="upload/photostream2.jpg"
                         alt=""
                     />
                 </a>
@@ -438,7 +440,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream3.jpg"
+                        src="upload/photostream3.jpg"
                         alt=""
                     />
                 </a>
@@ -446,7 +448,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream4.jpg"
+                        src="upload/photostream4.jpg"
                         alt=""
                     />
                 </a>
@@ -454,7 +456,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream5.jpg"
+                        src="upload/photostream5.jpg"
                         alt=""
                     />
                 </a>
@@ -462,7 +464,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream6.jpg"
+                        src="upload/photostream6.jpg"
                         alt=""
                     />
                 </a>
@@ -470,7 +472,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream7.jpg"
+                        src="upload/photostream7.jpg"
                         alt=""
                     />
                 </a>
@@ -478,7 +480,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream8.jpg"
+                        src="upload/photostream8.jpg"
                         alt=""
                     />
                 </a>
@@ -486,7 +488,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream9.jpg"
+                        src="upload/photostream9.jpg"
                         alt=""
                     />
                 </a>
@@ -494,7 +496,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream10.jpg"
+                        src="upload/photostream10.jpg"
                         alt=""
                     />
                 </a>
@@ -502,7 +504,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream11.jpg"
+                        src="upload/photostream11.jpg"
                         alt=""
                     />
                 </a>
@@ -510,7 +512,7 @@
             <li>
                 <a target="_blank" href="https://www.instagram.com/">
                     <img
-                        src="assets/upload/photostream12.jpg"
+                        src="upload/photostream12.jpg"
                         alt=""
                     />
                 </a>
@@ -562,5 +564,4 @@
 
 </body>
 </html>
-
 

@@ -52,13 +52,13 @@
                             <ul id="menu-contact-menu" class="menu">
                                 <li
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137350">
-                                    <a href="https://monochrome-watches.com/contact/">About</a></li>
+                                    <a href="{{ route('about') }}">About Us</a></li>
                                 <li
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137350">
-                                    <a href="https://monochrome-watches.com/contact/">Contact Us</a></li>
+                                    <a href="{{ route('contact') }}">Contact Us</a></li>
                                 <li
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137351">
-                                    <a href="https://monochrome-watches.com/advertising/">Advertising</a></li>
+                                    <a href="{{ route('advertising') }}">Advertising</a></li>
                             </ul>
                         </section>
                     </div>

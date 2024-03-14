@@ -66,6 +66,11 @@ class FrontendController extends Controller
         return view('contact/about');
     }
 
+    public function showAdvertisingPage(): View
+    {
+        return view('contact/advertising');
+    }
+
     public function showStartPage(): View
     {
         return view('start');

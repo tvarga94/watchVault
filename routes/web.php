@@ -22,8 +22,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [FrontendController::class, 'showMainPage']);
-Route::get('/contact', [FrontendController::class, 'showMainPage']);
-Route::get('/about', [FrontendController::class, 'showAboutPage']);
+Route::get('/contact', [FrontendController::class, 'showMainPage'])->name('contact');
+Route::get('/about', [FrontendController::class, 'showAboutPage'])->name('about');
+Route::get('/advertising', [FrontendController::class, 'showAdvertisingPage'])->name('advertising');
 
 Route::post('/canvas/login', [CustomLoginController::class, 'store']);
 
