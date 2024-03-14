@@ -48,6 +48,6 @@ class WatchController extends Controller
     {
         $this->watchRepository->update($request);
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Update was successful!');
     }
 }

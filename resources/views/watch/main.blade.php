@@ -29,8 +29,9 @@
         </div>
             </td><td>
         <div class="form-group mb-2">
-            <label for="Image">Image</label>
-            <input type="checkbox" class="form-control" name="image" value="1">
+            <label for="Image">Image</label><br />
+            <input type="hidden" name="image" value="0">
+            <input type="checkbox" name="image" value="1">
         </div>
              </td><td>
         <div class="form-group mb-2">

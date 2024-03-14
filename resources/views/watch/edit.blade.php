@@ -13,6 +13,11 @@
 </head>
 <body>
 <div class="container mt-5" style="text-align: center">
+    @if(session('success'))
+        <div id="successMessage" style="background-color: #d4edda; color: #155724; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
+            {{ session('success') }}
+        </div>
+    @endif
     <a href="{{route('watch')}}"><h2> Back to the main page</h2></a>
     <form method="POST" action="/watch/edit/{{$watch['id']}}">
         @csrf
@@ -29,8 +34,9 @@
         </div>
              </td><td>
         <div class="form-group mb-2">
-            <label for="Image">Image</label>
-            <input type="text" class="form-control" name="image" placeholder="Image" value="{{$watch['image']}}">
+            <label for="Image">Image</label><br />
+            <input type="hidden" name="image" value="0">
+            <input type="checkbox" name="image" value="1" {{ $watch['image'] == 1 ? 'checked' : '' }}>
         </div>
              </td><td>
         <div class="form-group mb-2">
@@ -83,5 +89,13 @@
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
+<script>
+    setTimeout(function() {
+        var successMessage = document.getElementById('successMessage');
+        if (successMessage) {
+            successMessage.style.display = 'none';
+        }
+    }, 2000); // 2000 milliseconds = 2 seconds
+</script>
 </body>
 </html>
