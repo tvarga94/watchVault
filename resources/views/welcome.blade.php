@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon/favicon.png')  }}" />
 
-    <title>Grand Blog | Responsive Blog Template</title>
+    <title>The Watch Vault</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/wordpress.css') }}" type="text/css" media="all" />
