@@ -5,16 +5,16 @@
             <div class="social_wrapper">
                 <ul>
                     <li class="facebook">
-                        <a href="https://www.tiktok.com/@thewatchvault_official"><img src="assets/images/icon/tiktok.png" /></a>
+                        <a href="https://www.tiktok.com/@thewatchvault_official"><img src="{{ asset('assets/images/icon/tiktok.png') }}" /></a>
                     </li>
                     <li class="youtube">
-                        <a href="https://youtube.com/@thewatchvault_official"><img src="assets/images/icon/youtube.png" /></a>
+                        <a href="https://youtube.com/@thewatchvault_official"><img src="{{ asset('assets/images/icon/youtube.png') }}" /></a>
                     </li>
                     <li class="pinterest">
-                        <a title="Pinterest" href="https://pin.it/3B2TkrumK"><img src="assets/images/icon/pinterest.png" /></a>
+                        <a title="Pinterest" href="https://pin.it/3B2TkrumK"><img src="{{ asset('assets/images/icon/pinterest.png') }}" /></a>
                     </li>
                     <li class="instagram">
-                        <a title="Instagram" href="https://pin.it/3B2TkrumK"><img src="assets/images/icon/instagram.png" /></a>
+                        <a title="Instagram" href="https://pin.it/3B2TkrumK"><img src="{{ asset('assets/images/icon/instagram.png') }}" /></a>
                     </li>
                 </ul>
             </div>
@@ -29,51 +29,50 @@
                                 <li class="menu-item menu-item-has-children arrow">
                                     <a href="singleblog.html">Brands</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="single-right_sidebar.html">Rolex</a></li>
-                                        <li class="menu-item"><a href="single-fullwidth.html">Tudor</a></li>
-                                        <li class="menu-item"><a href="single-left_sidebar.html">Seiko</a></li>
-                                        <li class="menu-item"><a href="beauty-of-nature.html">Casio</a></li>
-                                        <li class="menu-item"><a href="city-center-bridge.html">Hublot</a></li>
-                                        <li class="menu-item"><a href="golden-snow-land.html">Omega</a></li>
-                                        <li class="menu-item"><a href="golden-snow-land.html">All</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Rolex']) }}">Rolex</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Tudor']) }}">Tudor</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Seiko']) }}">Seiko</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Casio']) }}">Casio</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Hublot']) }}">Hublot</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Omega']) }}">Omega</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children arrow">
                                     <a href="singleblog.html">Classes</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="single-right_sidebar.html">Cheap</a></li>
-                                        <li class="menu-item"><a href="single-fullwidth.html">Affordable</a></li>
-                                        <li class="menu-item"><a href="single-left_sidebar.html">Premium</a></li>
-                                        <li class="menu-item"><a href="beauty-of-nature.html">Luxory</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Cheap']) }}">Cheap</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Affordable']) }}">Affordable</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Premium']) }}">Premium</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Luxory']) }}">Luxory</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children arrow">
                                     <a href="singleblog.html">Movement</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="single-right_sidebar.html">Mechanical</a></li>
-                                        <li class="menu-item"><a href="single-fullwidth.html">Automatic</a></li>
-                                        <li class="menu-item"><a href="single-left_sidebar.html">Quartz</a></li>
-                                        <li class="menu-item"><a href="beauty-of-nature.html">Solar</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Mechanical']) }}">Mechanical</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Automatic']) }}">Automatic</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Quartz']) }}">Quartz</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Solar']) }}">Solar</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children arrow">
                                     <a href="singleblog.html">Functionality</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="single-right_sidebar.html">Analog</a></li>
-                                        <li class="menu-item"><a href="single-fullwidth.html">Chronograph</a></li>
-                                        <li class="menu-item"><a href="single-left_sidebar.html">Digital</a></li>
-                                        <li class="menu-item"><a href="beauty-of-nature.html">Hybrid</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Analog']) }}">Analog</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Chronograph']) }}">Chronograph</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Digital']) }}">Digital</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Hybrid']) }}">Hybrid</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children arrow">
                                     <a href="singleblog.html">STyle</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="single-right_sidebar.html">Aviator</a></li>
-                                        <li class="menu-item"><a href="single-fullwidth.html">Racing</a></li>
-                                        <li class="menu-item"><a href="single-left_sidebar.html">Diver</a></li>
-                                        <li class="menu-item"><a href="beauty-of-nature.html">Skeleton</a></li>
-                                        <li class="menu-item"><a href="beauty-of-nature.html">Wood</a></li>
-                                        <li class="menu-item"><a href="beauty-of-nature.html">Smart</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Aviator']) }}">Aviator</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Racing']) }}">Racing</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Diver']) }}">Diver</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Skeleton']) }}">Skeleton</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Wood']) }}">Wood</a></li>
+                                        <li class="menu-item"><a href="{{ route('list', ['filter' => 'Smart']) }}">Smart</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -81,11 +80,6 @@
                     </div>
                 </div>
             </div>
-            <!-- End main nav -->
-
-            <!-- Begin right corner buttons -->
-
-            <!-- End right corner buttons -->
         </div>
     </div>
 </div>

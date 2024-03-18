@@ -101,7 +101,7 @@
                 src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services">The
+                    <h3 class="card-title"><a href="{{ route('post', ['id' => $latestPosts[0]['id']]) }}">
                             {{ $latestPosts[0]['title'] ?? ''}}
                         </a></h3>
                     <p class="card-text">{{ $latestPosts[0]['summary'] ?? ''}}</p>
@@ -122,15 +122,14 @@
             </div>
         </div>
         <div class="columns">
-            @foreach($latestPosts as $key => $lastestPost)
+            @foreach($latestPosts as $key => $latestPost)
                 @if($key > 0)
                     <div class="innercolumns">
                         <img
                             src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
                         <div class="card-body">
                             <div class="card-content">
-                                <h3 class="card-title"><a
-                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $lastestPost['title'] ?? ''}}</a></h3>
+                                <h3 class="card-title"><a href="{{ route('post', ['id' => $latestPost['id']]) }}">{{ $latestPost['title'] ?? ''}}</a></h3>
                             </div>
                             <footer class="card-meta">
                                 <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +141,7 @@
                                               d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                         </path>
                                     </svg></dt>
-                                <dd>{{ $lastestPost['created_at'] ?? ''}}</dd>
+                                <dd>{{ $latestPost['created_at'] ?? ''}}</dd>
                             </footer>
                         </div>
                     </div>
@@ -161,7 +160,7 @@
                 src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services">{{ $brandPosts[0]['title'] ?? ''}}</a></h3>
+                    <h3 class="card-title"><a href="{{ route('post', ['id' => $brandPosts[0]['id']]) }}">{{ $brandPosts[0]['title'] ?? ''}}</a></h3>
                     <p class="card-text">{{ $brandPosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
@@ -187,8 +186,7 @@
                             src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
                         <div class="card-body">
                             <div class="card-content">
-                                <h3 class="card-title"><a
-                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service"> {{ $brandPost['title'] ?? ''}}</a></h3>
+                                <h3 class="card-title"><a href="{{ route('post', ['id' => $brandPost['id']]) }}"> {{ $brandPost['title'] ?? ''}}</a></h3>
                             </div>
                             <footer class="card-meta">
                                 <dt>
@@ -222,8 +220,7 @@
                 <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
                 <div class="card-body">
                     <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $classPost['title'] ?? ''}}</a></h3>
+                        <h3 class="card-title"><a href="{{ route('post', ['id' => $classPost['id']]) }}">{{ $classPost['title'] ?? ''}}</a></h3>
                     </div>
                     <footer class="card-meta">
                         <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -254,8 +251,7 @@
                     <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
                     <div class="card-body">
                         <div class="card-content">
-                            <h3 class="card-title"><a
-                                    href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $movementPost['title'] ?? ''}}</a></h3>
+                            <h3 class="card-title"><a href="{{ route('post', ['id' => $movementPost['id']]) }}">{{ $movementPost['title'] ?? ''}}</a></h3>
                         </div>
                         <footer class="card-meta">
                             <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -284,7 +280,7 @@
             <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services"> {{ $functionalityPosts[0]['title'] ?? '' }}</a></h3>
+                    <h3 class="card-title"><a href="{{ route('post', ['id' => $functionalityPosts[0]['id']]) }}"> {{ $functionalityPosts[0]['title'] ?? '' }}</a></h3>
                     <p class="card-text">{{$functionalityPosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
@@ -309,8 +305,7 @@
                 <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
                 <div class="card-body">
                     <div class="card-content">
-                        <h3 class="card-title"><a
-                                href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $functionalityPost['title'] ?? ''}}</a></h3>
+                        <h3 class="card-title"><a href="{{ route('post', ['id' => $functionalityPost['id']]) }}">{{ $functionalityPost['title'] ?? ''}}</a></h3>
                     </div>
                     <footer class="card-meta">
                         <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -340,7 +335,7 @@
             <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a href="https://proprivacy.com/vpn/comparison/best-vpn-services"> {{ $stylePosts[0]['title'] ?? ''}}</a></h3>
+                    <h3 class="card-title"><a href="{{ route('post', ['id' => $stylePosts[0]['id']]) }}"> {{ $stylePosts[0]['title'] ?? ''}}</a></h3>
                     <p class="card-text">{{$stylePosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
@@ -365,8 +360,7 @@
                         <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
                         <div class="card-body">
                             <div class="card-content">
-                                <h3 class="card-title"><a
-                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $stylePost['title'] ?? ''}}</a></h3>
+                                <h3 class="card-title"><a href="{{ route('post', ['id' => $stylePost['id']]) }}">{{ $stylePost['title'] ?? ''}}</a></h3>
                             </div>
                             <footer class="card-meta">
                                 <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"

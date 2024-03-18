@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\PopularPost;
 use Canvas\Models\Post;
 use Canvas\Models\Topic;
+use Illuminate\Support\Facades\Request;
 use Illuminate\View\View;
 use function _PHPStan_8b6260c21\RingCentral\Psr7\_caseless_remove;
 
@@ -74,5 +75,28 @@ class FrontendController extends Controller
     public function showStartPage(): View
     {
         return view('start');
+    }
+
+    public function showPostPage(string $id): View
+    {
+        $post = Post::where('id', $id)->first();
+
+        return view('post')->with('post', $post);
+    }
+
+    public function showListPage(string $filter): View
+    {
+        $topicResult = Topic::firstWhere('name', $filter);
+
+        if ($topicResult) {
+            $filteredValues = $topicResult->posts()->paginate(12);
+            if ($filteredValues->isEmpty()) {
+                $filteredValues = null;
+            }
+        } else {
+            $filteredValues = null;
+        }
+
+        return view('list')->with('filteredValues', $filteredValues);
     }
 }
