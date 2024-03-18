@@ -12,7 +12,7 @@ class OptionsController
 {
     public function index(): View
     {
-        $posts = Post::all();
+        $posts = Post::whereNotNull('published_at')->get();
         $mainArticleId = PopularPost::where('place', 'main')->first()->canvas_posts_id;
         $firstArticleId = PopularPost::where('place', 'first')->first()->canvas_posts_id;
         $secondArticleId = PopularPost::where('place', 'second')->first()->canvas_posts_id;

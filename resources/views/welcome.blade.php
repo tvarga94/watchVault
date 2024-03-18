@@ -37,9 +37,7 @@
                 src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a
-                            href="https://proprivacy.com/vpn/comparison/best-vpn-services"></a>{{ $canvasPosts[0]['title'] ?? ''}}
-                    </h3>
+                    <h3 class="card-title"><a href="{{ route('post', ['id' => $canvasPosts[0]['id']]) }}"> {{ $canvasPosts[0]['title'] ?? ''}}</a></h3>
                     <p class="card-text">{{ $canvasPosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
@@ -67,8 +65,7 @@
                             src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
                         <div class="card-body">
                             <div class="card-content">
-                                <h3 class="card-title"><a
-                                        href="https://proprivacy.com/vpn/comparison/best-cheap-vpn-service">{{ $canvasPost['title'] ?? ''}}</a></h3>
+                                <h3 class="card-title"><a href="{{ route('post', ['id' => $canvasPost['id']]) }}">{{ $canvasPost['title'] ?? ''}}</a></h3>
                             </div>
                             <footer class="card-meta">
                                 <dt>

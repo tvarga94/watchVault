@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\PopularPost;
 use Canvas\Models\Post;
 use Canvas\Models\Topic;
-use Illuminate\Support\Facades\Request;
 use Illuminate\View\View;
 use function _PHPStan_8b6260c21\RingCentral\Psr7\_caseless_remove;
 
@@ -35,10 +34,14 @@ class FrontendController extends Controller
     public function getPopularPosts(): array
     {
         $posts = [];
-        $popularPosts = PopularPost::all();
+        $popularPosts = PopularPost::with(['canvasPost' => function($query) {
+            $query->whereNotNull('published_at');
+        }])->get();
 
         foreach ($popularPosts as $popularPost) {
-            $posts[] = $popularPost->canvasPost;
+            if (!is_null($popularPost->canvasPost)) {
+                $posts[] = $popularPost->canvasPost;
+            }
         }
 
         return $posts;
@@ -46,14 +49,18 @@ class FrontendController extends Controller
 
     public function getLatestArticles()
     {
-        return Post::latest()->take(4)->get();
+        return Post::whereNotNull('published_at')->latest()->take(4)->get();
     }
 
     public function getPostTopicLatestArticle(string $topic, int $quantity)
     {
         $topicResult = Topic::firstWhere('name', $topic);
 
-        return $topicResult ? $topicResult->posts()->published()->take($quantity)->get() : response()->json(null, 200);
+        if ($topicResult) {
+            return $topicResult->posts()->whereNotNull('published_at')->take($quantity)->get();
+        } else {
+            return response()->json(null, 200);
+        }
 
     }
 
