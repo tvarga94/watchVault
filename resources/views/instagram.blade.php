@@ -4,7 +4,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream1.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>
@@ -12,7 +12,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream2.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>
@@ -20,7 +20,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream3.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>
@@ -28,7 +28,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream4.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>
@@ -36,7 +36,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream5.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>
@@ -44,7 +44,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream6.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>
@@ -52,7 +52,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream7.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>
@@ -60,7 +60,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream8.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>
@@ -68,7 +68,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream9.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>
@@ -76,7 +76,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream10.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>
@@ -84,7 +84,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream11.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>
@@ -92,7 +92,7 @@
         <li>
             <a target="_blank" href="https://www.instagram.com/">
                 <img
-                    src="assets/upload/photostream12.jpg"
+                    src="{{ asset('assets/watch.jpg')  }}"
                     alt=""
                 />
             </a>

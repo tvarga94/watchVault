@@ -37,7 +37,7 @@
                 src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a href="{{ route('post', ['id' => $canvasPosts[0]['id']]) }}"> {{ $canvasPosts[0]['title'] ?? ''}}</a></h3>
+                    <h3 class="card-title"><a href="{{ route('post', ['id' => $canvasPosts[0]['id']]) }}"> {{ $canvasPosts[0]['title'] ?? ''}}</h3>
                     <p class="card-text">{{ $canvasPosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
@@ -396,8 +396,6 @@
 <script type="text/javascript" src="{{ asset('assets/js/plugins/modernizr.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/plugins/jquery.gridrotator.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/plugins/script-gridrotator.js') }}"></script>
-
-
 </body>
 </html>
 

@@ -30,7 +30,7 @@
 @else
 <div class="section_2">
     <div class="container">
-        <div class="other-divs">
+        <div class="other-divs" style="gap: 15px">
             @foreach($filteredValues as $filteredValue)
                 <div class="innercolumns">
                     <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
