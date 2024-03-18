@@ -38,9 +38,9 @@
 <body>
 <h1 style="text-align: center;padding-top: 2%">Dashboard</h1>
 <div class="container">
-    <div class="box"><a href="/watch">Modify The Watch Database</a></div>
-    <div class="box"><a href="/options">Set Popular Articles</a></div>
-    <div class="box"><a href="/canvas/stat">Go To The Blog</a></div>
+    <div class="box"><img src="{{ asset('assets/images/icon/watch.png') }}"><a href="/watch">Modify The Watch Database</a></div>
+    <div class="box"><img src="{{ asset('assets/images/icon/settings.png') }}"><a href="/options"> Set Popular Articles</a></div>
+    <div class="box"><img src="{{ asset('assets/images/icon/blog.png') }}"><a href="/canvas/stat"> Go To The Blog</a></div>
 </div>
 </body>
 </html>

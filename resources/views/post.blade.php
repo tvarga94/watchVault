@@ -18,65 +18,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/styleNEW.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/grid.css') }}" type="text/css" media="all" />
-<style>
-    .posts-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px; /* Adjust the space between posts */
-        justify-content: center; /* Center the posts */
-    }
 
-    .post {
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        width: calc(33.333% - 20px); /* 3 posts per row with gap */
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .post-image img {
-        width: 100%;
-        height: auto;
-        object-fit: cover; /* Adjust as needed */
-    }
-
-    .post-content {
-        padding: 15px;
-    }
-
-    .post-content h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-
-    .post-meta span {
-        font-size: 14px;
-        color: #999;
-    }
-
-    .summary {
-        color: #666;
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-
-    .post-body {
-        font-size: 14px;
-        margin-bottom: 15px;
-        color: #444;
-    }
-
-    .read-more {
-        display: inline-block;
-        background-color: #007bff;
-        color: #ffffff;
-        padding: 10px 15px;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-
-</style>
 </head>
 
 <body data-rsssl="1" class="home blog">
@@ -88,6 +30,7 @@
         <h1>{{ $post['title'] }}</h1>
         <h5> Written By: {{ $post['user_id'] }}
         <h5> {{ $post['read_time'] }}
+
         {!! $post['body'] !!}
     </div>
 

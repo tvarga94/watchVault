@@ -53,7 +53,7 @@ class FrontendController extends Controller
     {
         $topicResult = Topic::firstWhere('name', $topic);
 
-        return $topicResult ? $topicResult->posts()->take($quantity)->get() : response()->json(null, 200);
+        return $topicResult ? $topicResult->posts()->published()->take($quantity)->get() : response()->json(null, 200);
 
     }
 
