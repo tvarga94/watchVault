@@ -21,7 +21,7 @@
     <a href="{{route('watch')}}"><h2> Back to the main page</h2></a>
     <form method="POST" action="/watch/edit/{{$watch['id']}}">
         @csrf
-        <table>
+        <table style="margin: auto; width: 100%; border-collapse: collapse;">
             <tr><td>
         <div class="form-group mb-2">
             <label for="brand">Brand</label>

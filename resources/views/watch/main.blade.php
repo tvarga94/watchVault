@@ -16,68 +16,68 @@
     <h2> Add new watch</h2>
     <form method="POST" action="watch/addWatch">
         @csrf
-        <table>
+        <table style="margin: auto; width: 100%; border-collapse: collapse;">
             <tr><td>
         <div class="form-group mb-2">
-            <label for="brand">Brand</label>
+            <label>Brand</label>
             <input type="text" class="form-control" name="brand">
         </div>
             </td><td>
         <div class="form-group mb-2">
-            <label for="model">Model</label>
+            <label>Model</label>
             <input type="text" class="form-control" name="model">
         </div>
             </td><td>
         <div class="form-group mb-2">
-            <label for="Image">Image</label><br />
+            <label>Image</label><br />
             <input type="hidden" name="image" value="0">
             <input type="checkbox" name="image" value="1">
         </div>
              </td><td>
         <div class="form-group mb-2">
-            <label for="Price">Price</label>
+            <label>Price</label>
             <input type="text" class="form-control" name="price">
         </div>
              </td></tr>
              <tr><td>
         <div class="form-group mb-2">
-            <label for="PriceRange">Price Range Brand Class</label>
+            <label>Price Range Brand Class</label>
             <input type="text" class="form-control" name="price_range_brand_class">
         </div>
               </td><td>
         <div class="form-group mb-2">
-            <label for="movement">Movement</label>
+            <label>Movement</label>
             <input type="text" class="form-control" name="movement">
         </div>
             </td><td>
         <div class="form-group mb-2">
-            <label for="functionality">Functionality</label>
+            <label>Functionality</label>
             <input type="text" class="form-control" name="functionality">
         </div>
             </td><td>
         <div class="form-group mb-2">
-            <label for="style1">Style 1</label>
+            <label>Style 1</label>
             <input type="text" class="form-control" name="style1">
         </div>
             </td></tr>
             <tr><td>
         <div class="form-group mb-2">
-            <label for="style2">Style 2</label>
+            <label>Style 2</label>
             <input type="text" class="form-control" name="style2">
         </div>
             </td><td>
         <div class="form-group mb-2">
-            <label for="style3">Style 3</label>
+            <label>Style 3</label>
             <input type="text" class="form-control" name="style3">
         </div>
             </td><td>
         <div class="form-group mb-2">
-            <label for="style4">Style 4</label>
+            <label>Style 4</label>
             <input type="text" class="form-control" name="style4">
         </div>
             </td><td>
         <div class="form-group mb-2">
-            <label for="style5">Style 5</label>
+            <label>Style 5</label>
             <input type="text" class="form-control" name="style5">
         </div>
             </td></tr></table>
