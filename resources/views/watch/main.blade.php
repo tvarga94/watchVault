@@ -13,6 +13,7 @@
 </head>
 <body>
 <div class="container mt-5" style="text-align: center">
+    <a href="{{route('start')}}"><h2> Back to the start page</h2></a>
     <h2> Add new watch</h2>
     <form method="POST" action="watch/addWatch">
         @csrf

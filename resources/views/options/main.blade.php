@@ -18,7 +18,7 @@
             {{ session('success') }}
         </div>
     @endif
-    <h1>Select an Article</h1>
+        <a href="{{route('start')}}"><h2> Back to the start page</h2></a>
     <form action="/options/store" method="POST">
         @csrf
         <h2><label for="article_id">Set the popular posts</label></h2><br />

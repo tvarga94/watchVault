@@ -83,22 +83,6 @@
                     </div>
                     <div>
                         <section class="widget text-104 widget_text">
-                            <!--  <h3>Partners</h3>
-                              <div class="textwidget">
-                                  <p>
-                                      <a href="http://www.gphg.org/" target="_blank" rel="noopener">
-                                          <noscript>
-                                              <img src="https://monochrome-watches.com/wp-content/uploads/2018/04/LOGO-GPHG-FONDATION-NEG.png"
-                                                   width="150" height="120" alt="GPHG" />
-                                          </noscript>
-                                          <img src="https://monochrome-watches.com/wp-content/uploads/2018/04/LOGO-GPHG-FONDATION-NEG.png"
-                                               data-src="https://monochrome-watches.com/wp-content/uploads/2018/04/LOGO-GPHG-FONDATION-NEG.png"
-                                               width="150" height="120" alt="GPHG"
-                                               class="lazy-images img-responsive lazy-images--loaded"
-                                               data-ll-status="loaded">
-                                      </a>
-                                  </p>
-                              </div> -->
                         </section>
                     </div>
                 </div>
@@ -111,9 +95,7 @@
                     © 2024 THE WATCH VAULT
                     <span class="footer__sep">|</span>
                     <ul id="menu-privacy-menu" class="footer-privacy-menu">
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134157"><a
-                                href="https://monochrome-watches.com/privacy-policy-of-monochrome-watches-com/">Privacy
-                                policy</a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134157"><a href="https://monochrome-watches.com/privacy-policy-of-monochrome-watches-com/">Privacy policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -123,39 +105,34 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent form from submitting the traditional way.
+            e.preventDefault();
 
             var formData = new FormData(this);
 
-            // Adjust the fetch URL as necessary. Make sure it matches your Laravel route.
             fetch('/newsletter/store', {
                 method: 'POST',
                 body: formData,
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest',
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}' // Ensure CSRF token is included.
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 }
             })
-                .then(response => response.json()) // Convert response to JSON.
+                .then(response => response.json())
                 .then(data => {
                     console.log('Success:', data);
 
-                    // Display success message.
                     var messageDiv = document.getElementById('subscriptionMessage');
-                    messageDiv.style.display = 'block'; // Make the message visible.
-                    messageDiv.textContent = 'Successful subscription! Thank you for subscribing.'; // Update with your message.
+                    messageDiv.style.display = 'block';
+                    messageDiv.textContent = 'Successful subscription! Thank you for subscribing.';
 
-                    // Clear the form fields.
                     document.getElementById('newsletterForm').reset();
 
-                    // Hide the success message after 2 seconds.
                     setTimeout(function() {
-                        messageDiv.style.display = 'none'; // Hide the message.
-                    }, 3000); // 3000 milliseconds = 3 seconds
+                        messageDiv.style.display = 'none';
+                    }, 3000);
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    // Optionally, handle errors and display an error message.
                 });
         });
     });

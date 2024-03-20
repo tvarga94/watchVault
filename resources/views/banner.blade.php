@@ -1,5 +1,5 @@
 <div id="logo_wrapper">
-    <img src="{{ asset('assets/logo.png') }}" alt="" height="85" width="80" style="padding-top: 1%"/>
+    <img src="{{ asset('assets/logo.png') }}" alt="" height="85" width="80" />
     <div id="logo_normal" class="logo_container">
         <div class="logo_align">
             <a id="custom_logo" class="logo_wrapper default" href="index.html">

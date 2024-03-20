@@ -25,6 +25,9 @@
 <!-- Begin mobile menu -->
 @include('menu')
 
+@if (NULL === $post)
+    @include('404')
+@else
 <div class="section_2" style="padding-top: 5%">
     <div class="container">
         <h1>{{ $post['title'] }}</h1>
@@ -33,9 +36,8 @@
 
         {!! $post['body'] !!}
     </div>
-
 </div>
-
+@endif
 
 @include('instagram')
 @include('footer')

@@ -33,8 +33,7 @@
     <div class="line_settings"><h3 class="text_line"><span>POPULAR ARTICLES</span></h3></div>
     <div class="container">
         <div class="main-div">
-            <img
-                src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
+            <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
             <div class="card_body">
                 <div class="card-content">
                     <h3 class="card-title"><a href="{{ route('post', ['id' => $canvasPosts[0]['id']]) }}"> {{ $canvasPosts[0]['title'] ?? ''}}</h3>
@@ -53,7 +52,7 @@
                             </path>
                         </svg>
                     </dt>
-                    <dd>{{ $canvasPosts[0]['created_at'] ?? ''}}</dd>
+                    <dd>{{ date('Y-m-d', strtotime($canvasPosts[0]['created_at'] ))}}</dd>
                 </footer>
             </div>
         </div>
@@ -79,7 +78,7 @@
                                         </path>
                                     </svg>
                                 </dt>
-                                <dd>{{ $canvasPost['created_at'] ?? ''}}</dd>
+                                <dd>{{ date('Y-m-d', strtotime($canvasPost['created_at'])) ?? ''}}</dd>
                             </footer>
                         </div>
                     </div>
@@ -114,7 +113,7 @@
                                   d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                             </path>
                         </svg></dt>
-                    <dd>{{ $latestPosts[0]['created_at'] ?? ''}}</dd>
+                    <dd>{{ date('Y-m-d', strtotime($latestPosts[0]['created_at'])) ?? ''}}</dd>
                 </footer>
             </div>
         </div>
@@ -138,7 +137,7 @@
                                               d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                         </path>
                                     </svg></dt>
-                                <dd>{{ $latestPost['created_at'] ?? ''}}</dd>
+                                <dd>{{ date('Y-m-d', strtotime($latestPost['created_at'])) ?? ''}}</dd>
                             </footer>
                         </div>
                     </div>
@@ -171,7 +170,7 @@
                                   d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                             </path>
                         </svg></dt>
-                    <dd>{{ $brandPosts[0]['created_at'] ?? ''}}</dd>
+                    <dd>{{ date('Y-m-d', strtotime($brandPosts[0]['created_at'])) ?? ''}}</dd>
                 </footer>
             </div>
         </div>
@@ -197,7 +196,7 @@
                                         </path>
                                     </svg>
                                 </dt>
-                                <dd>{{ $brandPost['created_at'] ?? ''}}</dd>
+                                <dd>{{ date('Y-m-d', strtotime($brandPost['created_at'])) ?? ''}}</dd>
                             </footer>
                         </div>
                     </div>
@@ -229,7 +228,7 @@
                                       d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                 </path>
                             </svg></dt>
-                        <dd>{{ $classPost['created_at'] ?? ''}}</dd>
+                        <dd>{{ date('Y-m-d', strtotime($classPost['created_at'])) ?? ''}}</dd>
                     </footer>
                 </div>
             </div>
@@ -260,7 +259,7 @@
                                           d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                     </path>
                                 </svg></dt>
-                            <dd>{{ $movementPost['created_at'] ?? ''}}</dd>
+                            <dd>{{ date('Y-m-d', strtotime($movementPost['created_at'])) ?? ''}}</dd>
                         </footer>
                     </div>
                 </div>
@@ -291,7 +290,7 @@
                                   d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                             </path>
                         </svg></dt>
-                    <dd>{{ $functionalityPosts[0]['created_at'] ?? ''}}</dd>
+                    <dd>{{ date('Y-m-d', strtotime($functionalityPosts[0]['created_at'])) ?? ''}}</dd>
                 </footer>
             </div>
         </div>
@@ -314,7 +313,7 @@
                                       d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                 </path>
                             </svg></dt>
-                        <dd>{{ $functionalityPost['created_at'] ?? ''}}</dd>
+                        <dd>{{ date('Y-m-d', strtotime($functionalityPost['created_at'])) ?? ''}}</dd>
                     </footer>
                 </div>
             </div>
@@ -346,7 +345,7 @@
                                   d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                             </path>
                         </svg></dt>
-                    <dd>{{ $stylePosts[0]['created_at'] ?? ''}}</dd>
+                    <dd>{{ date('Y-m-d', strtotime($stylePosts[0]['created_at'])) ?? ''}}</dd>
                 </footer>
             </div>
         </div>
@@ -369,7 +368,7 @@
                                               d="M480,87.77A23.8,23.8,0,0,0,456,64H400.08V32h-48V64H159.92V32h-48V64H56A23.8,23.8,0,0,0,32,87.77V144H480Z">
                                         </path>
                                     </svg></dt>
-                                <dd>{{ $stylePost['created_at'] ?? ''}}</dd>
+                                <dd>{{ date('Y-m-d', strtotime($stylePost['created_at'])) ?? ''}}</dd>
                             </footer>
                         </div>
                     </div>

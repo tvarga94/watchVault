@@ -26,7 +26,7 @@
 @include('menu')
 
 @if(null == $filteredValues)
-<h1 style="padding-top:4%;text-align: center">NO POSTS YET</h1>
+    @include('no_posts')
 @else
 <div class="section_2">
     <div class="container">
