@@ -93,11 +93,7 @@ class FrontendController extends Controller
     public function showListPage(string $filter): View
     {
         $topicResult = $this->frontendRepository->getTopic($filter);
-
-        $filteredValues = $topicResult->posts()->paginate(12);
-        if ($filteredValues->isEmpty()) {
-            $filteredValues = null;
-        }
+        $filteredValues = $topicResult?->posts()->paginate(12);
 
         return view('list')->with('filteredValues', $filteredValues);
     }
@@ -107,8 +103,10 @@ class FrontendController extends Controller
         $filteredValues = [];
         $topicResults = $this->frontendRepository->contentListPage($filter);
 
-        foreach($topicResults as $topicResult) {
-            $filteredValues[] = $topicResult->posts()->paginate(6);
+        if ($topicResults) {
+            foreach ($topicResults as $topicResult) {
+                $filteredValues[] = $topicResult->posts()->paginate(6);
+            }
         }
 
         return view('content/list')->with('filteredValues', $filteredValues);

@@ -22,7 +22,7 @@ class FrontendRepository
         return Post::whereNotNull($field)->latest()->take(4)->get();
     }
 
-    public function getTopic(string $topic): Topic
+    public function getTopic(string $topic): ?Topic
     {
         return Topic::firstWhere('name', $topic);
     }
@@ -34,7 +34,7 @@ class FrontendRepository
         return $topic->posts()->whereNotNull($field)->take($quantity)->get();
     }
 
-    public function contentListPage(string $filter): Collection
+    public function contentListPage(string $filter): ?Collection
     {
         return Topic::whereIn('name', $this->topicMapper()[$filter])->get();
     }

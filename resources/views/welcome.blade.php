@@ -29,15 +29,16 @@
 @include('slider')
 
 <!-- Popular Articles -->
+@if($canvasPosts)
 <div class="section_2">
     <div class="line_settings"><h3 class="text_line"><span>POPULAR ARTICLES</span></h3></div>
     <div class="container">
         <div class="main-div">
-            <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
+            <img src="{{ $canvasPosts[0]['featured_image'] }}" alt="featured_image" />
             <div class="card_body">
                 <div class="card-content">
-                    <h3 class="card-title"><a href="{{ route('post', ['id' => $canvasPosts[0]['id']]) }}"> {{ $canvasPosts[0]['title'] ?? ''}}</h3>
-                    <p class="card-text">{{ $canvasPosts[0]['summary'] ?? ''}}</p>
+                    <h3 class="card-title"><a href="{{ route('post', ['id' => $canvasPosts[0]['id']]) }}"> {{ $canvasPosts[0]['title']}}</h3>
+                    <p class="card-text">{{ $canvasPosts[0]['summary']}}</p>
                 </div>
                 <footer class="card-meta">
                     <dt>
@@ -60,11 +61,10 @@
             @foreach($canvasPosts as $key => $canvasPost)
                 @if($key > 0)
                     <div class="innercolumns">
-                        <img
-                            src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                        <img src="{{ $canvasPost['featured_image'] }}" alt="featured_image" />
                         <div class="card-body">
                             <div class="card-content">
-                                <h3 class="card-title"><a href="{{ route('post', ['id' => $canvasPost['id']]) }}">{{ $canvasPost['title'] ?? ''}}</a></h3>
+                                <h3 class="card-title"><a href="{{ route('post', ['id' => $canvasPost['id']]) }}">{{ $canvasPost['title']}}</a></h3>
                             </div>
                             <footer class="card-meta">
                                 <dt>
@@ -78,7 +78,7 @@
                                         </path>
                                     </svg>
                                 </dt>
-                                <dd>{{ date('Y-m-d', strtotime($canvasPost['created_at'])) ?? ''}}</dd>
+                                <dd>{{ date('Y-m-d', strtotime($canvasPost['created_at']))}}</dd>
                             </footer>
                         </div>
                     </div>
@@ -87,14 +87,14 @@
         </div>
     </div>
 </div>
+@endif
 
 <!-- Latest Articles -->
 <div id= "second" class="section_1">
     <div class="line_settings"><h3 class="text_line"><span>LATEST ARTICLES</span></h3></div>
     <div class="container">
         <div class="columns">
-            <img
-                src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
+            <img src="{{ $latestPosts[0]['featured_image'] }}" alt="featured_image" />
             <div class="card_body">
                 <div class="card-content">
                     <h3 class="card-title"><a href="{{ route('post', ['id' => $latestPosts[0]['id']]) }}">
@@ -121,8 +121,7 @@
             @foreach($latestPosts as $key => $latestPost)
                 @if($key > 0)
                     <div class="innercolumns">
-                        <img
-                            src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                        <img src="{{ $latestPost['featured_image'] }}" alt="featured_image" />
                         <div class="card-body">
                             <div class="card-content">
                                 <h3 class="card-title"><a href="{{ route('post', ['id' => $latestPost['id']]) }}">{{ $latestPost['title'] ?? ''}}</a></h3>
@@ -152,8 +151,7 @@
     <div class="line_settings"><h3 class="text_line"><span>LATEST BRAND ARTICLES</span></h3></div>
     <div class="container">
         <div class="columns">
-            <img
-                src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
+            <img src="{{ $brandPosts[0]['featured_image'] }}" alt="featured_image" />
             <div class="card_body">
                 <div class="card-content">
                     <h3 class="card-title"><a href="{{ route('post', ['id' => $brandPosts[0]['id']]) }}">{{ $brandPosts[0]['title'] ?? ''}}</a></h3>
@@ -178,8 +176,7 @@
             @foreach($brandPosts as $key => $brandPost)
                 @if($key > 0)
                     <div class="innercolumns">
-                        <img
-                            src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                        <img src="{{ $brandPost['featured_image'] }}" alt="featured_image" />
                         <div class="card-body">
                             <div class="card-content">
                                 <h3 class="card-title"><a href="{{ route('post', ['id' => $brandPost['id']]) }}"> {{ $brandPost['title'] ?? ''}}</a></h3>
@@ -213,7 +210,7 @@
         <div class="other-divs">
             @foreach($classPosts as $classPost)
             <div class="innercolumns">
-                <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                <img src="{{ $classPost['featured_image'] }} " alt="featured_image" />
                 <div class="card-body">
                     <div class="card-content">
                         <h3 class="card-title"><a href="{{ route('post', ['id' => $classPost['id']]) }}">{{ $classPost['title'] ?? ''}}</a></h3>
@@ -244,7 +241,7 @@
         <div class="other-divs">
             @foreach($movementPosts as $movementPost)
                 <div class="innercolumns">
-                    <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                    <img src="{{ $movementPost['featured_image'] }}" alt="featured_image" />
                     <div class="card-body">
                         <div class="card-content">
                             <h3 class="card-title"><a href="{{ route('post', ['id' => $movementPost['id']]) }}">{{ $movementPost['title'] ?? ''}}</a></h3>
@@ -273,11 +270,11 @@
     <div class="line_settings"><h3 class="text_line"><span>POPULAR FUNCTIONALITY ARTICLES</span></h3></div>
     <div class="container">
         <div class="main-div">
-            <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
+            <img src="{{ $functionalityPosts[0]['featured_image'] }}" alt="featured_image" />
             <div class="card_body">
                 <div class="card-content">
                     <h3 class="card-title"><a href="{{ route('post', ['id' => $functionalityPosts[0]['id']]) }}"> {{ $functionalityPosts[0]['title'] ?? '' }}</a></h3>
-                    <p class="card-text">{{$functionalityPosts[0]['summary'] ?? ''}}</p>
+                    <p class="card-text">{{ $functionalityPosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
                     <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -298,7 +295,7 @@
             @foreach($functionalityPosts as $key => $functionalityPost)
                 @if($key > 0)
             <div class="innercolumns">
-                <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                <img src="{{ $functionalityPost['featured_image'] }}" alt="featured_image" />
                 <div class="card-body">
                     <div class="card-content">
                         <h3 class="card-title"><a href="{{ route('post', ['id' => $functionalityPost['id']]) }}">{{ $functionalityPost['title'] ?? ''}}</a></h3>
@@ -328,11 +325,11 @@
     <div class="line_settings"><h3 class="text_line"><span>POPULAR STYLE ARTICLES</span></h3></div>
     <div class="container">
         <div class="main-div">
-            <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2022/11/best-vpn-graphicpng-featured_image-recommened_webp.webp">
+            <img src="{{ $stylePosts[0]['featured_image'] }}" alt="featured_image" />
             <div class="card_body">
                 <div class="card-content">
                     <h3 class="card-title"><a href="{{ route('post', ['id' => $stylePosts[0]['id']]) }}"> {{ $stylePosts[0]['title'] ?? ''}}</a></h3>
-                    <p class="card-text">{{$stylePosts[0]['summary'] ?? ''}}</p>
+                    <p class="card-text">{{ $stylePosts[0]['summary'] ?? ''}}</p>
                 </div>
                 <footer class="card-meta">
                     <dt><svg width="15" height="15" class="icon-calendar" xmlns="http://www.w3.org/2000/svg"
@@ -353,7 +350,7 @@
             @foreach($stylePosts as $key => $stylePost)
                 @if($key > 0)
                     <div class="innercolumns">
-                        <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                        <img src="{{ $stylePost['featured_image'] }}" alt="featured_image" />
                         <div class="card-body">
                             <div class="card-content">
                                 <h3 class="card-title"><a href="{{ route('post', ['id' => $stylePost['id']]) }}">{{ $stylePost['title'] ?? ''}}</a></h3>
