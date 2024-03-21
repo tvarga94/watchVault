@@ -10,7 +10,6 @@ use function _PHPStan_8b6260c21\RingCentral\Psr7\_caseless_remove;
 
 class FrontendController extends Controller
 {
-
     public function showMainPage(): View
     {
         $canvasPosts = $this->getPopularPosts();
