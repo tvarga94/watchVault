@@ -29,7 +29,8 @@
 @include('slider')
 
 <!-- Popular Articles -->
-@if($canvasPosts)
+
+@if($canvasPosts && 4 == count($canvasPosts))
 <div class="section_2">
     <div class="line_settings"><h3 class="text_line"><span>POPULAR ARTICLES</span></h3></div>
     <div class="container">
