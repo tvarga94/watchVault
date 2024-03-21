@@ -27,7 +27,7 @@
                             </button>
                             <ul id="main_menu" class="nav">
                                 <li class="menu-item menu-item-has-children arrow">
-                                    <a href="singleblog.html">Brands</a>
+                                    <a href="{{ route('content', ['filter' => 'Brands']) }}">Brands</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="{{ route('list', ['filter' => 'Rolex']) }}">Rolex</a></li>
                                         <li class="menu-item"><a href="{{ route('list', ['filter' => 'Tudor']) }}">Tudor</a></li>
@@ -38,7 +38,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children arrow">
-                                    <a href="singleblog.html">Classes</a>
+                                    <a href="{{ route('content', ['filter' => 'Classes']) }}">Classes</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="{{ route('list', ['filter' => 'Cheap']) }}">Cheap</a></li>
                                         <li class="menu-item"><a href="{{ route('list', ['filter' => 'Affordable']) }}">Affordable</a></li>
@@ -47,7 +47,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children arrow">
-                                    <a href="singleblog.html">Movement</a>
+                                    <a href="{{ route('content', ['filter' => 'Movement']) }}">Movement</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="{{ route('list', ['filter' => 'Mechanical']) }}">Mechanical</a></li>
                                         <li class="menu-item"><a href="{{ route('list', ['filter' => 'Automatic']) }}">Automatic</a></li>
@@ -56,7 +56,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children arrow">
-                                    <a href="singleblog.html">Functionality</a>
+                                    <a href="{{ route('content', ['filter' => 'Functionality']) }}">Functionality</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="{{ route('list', ['filter' => 'Analog']) }}">Analog</a></li>
                                         <li class="menu-item"><a href="{{ route('list', ['filter' => 'Chronograph']) }}">Chronograph</a></li>
@@ -65,7 +65,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children arrow">
-                                    <a href="singleblog.html">STyle</a>
+                                    <a href="{{ route('content', ['filter' => 'Style']) }}">Style</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="{{ route('list', ['filter' => 'Aviator']) }}">Aviator</a></li>
                                         <li class="menu-item"><a href="{{ route('list', ['filter' => 'Racing']) }}">Racing</a></li>

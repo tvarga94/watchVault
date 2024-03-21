@@ -27,6 +27,7 @@ Route::get('/contact', [FrontendController::class, 'showContactPage'])->name('co
 Route::get('/about', [FrontendController::class, 'showAboutPage'])->name('about');
 Route::get('/advertising', [FrontendController::class, 'showAdvertisingPage'])->name('advertising');
 Route::get('/list/{filter}', [FrontendController::class, 'showListPage'])->name('list');
+Route::get('/content/{filter}', [FrontendController::class, 'contentListPage'])->name('content');
 Route::get('/post/{id}', [FrontendController::class, 'showPostPage'])->name('post');
 
 Route::post('/canvas/login', [CustomLoginController::class, 'store']);

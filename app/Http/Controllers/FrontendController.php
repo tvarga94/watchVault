@@ -106,4 +106,28 @@ class FrontendController extends Controller
 
         return view('list')->with('filteredValues', $filteredValues);
     }
+
+    public function contentListPage($filter): View
+    {
+        $filteredValues = [];
+        $topicResults = Topic::whereIn('name', $this->topicMapper()[$filter])->get();
+
+        foreach($topicResults as $topicResult) {
+            $filteredValues[] = $topicResult->posts()->paginate(6);
+        }
+
+        return view('content/list')->with('filteredValues', $filteredValues);
+    }
+
+    private function topicMapper(): array
+    {
+        return [
+            'Brands' => ['rolex','tudor','seiko','casio','hublot','omaga'],
+            'Classes' => ['cheap','affordable','premium','luxory'],
+            'Movement' => ['mechanical','automatic','quartz','solar'],
+            'Functionality' => ['analog','chronograph','digital','hybrid'],
+            'Style' => ['aviator','racing','diver','skeleton','wood','smart'],
+        ];
+    }
+
 }
