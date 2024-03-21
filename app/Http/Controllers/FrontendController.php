@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PopularPost;
+use App\Repositories\FrontendRepository;
 use Canvas\Models\Post;
 use Canvas\Models\Topic;
 use Illuminate\View\View;
@@ -10,6 +11,12 @@ use function _PHPStan_8b6260c21\RingCentral\Psr7\_caseless_remove;
 
 class FrontendController extends Controller
 {
+    public FrontendRepository $frontendRepository;
+    public function __construct(FrontendRepository $frontendRepository)
+    {
+        $this->frontendRepository = $frontendRepository;
+    }
+
     public function showMainPage(): View
     {
         $canvasPosts = $this->getPopularPosts();
@@ -33,11 +40,7 @@ class FrontendController extends Controller
     public function getPopularPosts(): array
     {
         $posts = [];
-        $popularPosts = PopularPost::with(['canvasPost' => function($query) {
-            $query->whereNotNull('published_at');
-        }])->get();
-
-        foreach ($popularPosts as $popularPost) {
+        foreach ($this->frontendRepository->getPopularPosts() as $popularPost) {
             if (!is_null($popularPost->canvasPost)) {
                 $posts[] = $popularPost->canvasPost;
             }
@@ -48,19 +51,16 @@ class FrontendController extends Controller
 
     public function getLatestArticles()
     {
-        return Post::whereNotNull('published_at')->latest()->take(4)->get();
+        return $this->frontendRepository->getLatestArticles('published_at');
     }
 
     public function getPostTopicLatestArticle(string $topic, int $quantity)
     {
-        $topicResult = Topic::firstWhere('name', $topic);
-
-        if ($topicResult) {
-            return $topicResult->posts()->whereNotNull('published_at')->take($quantity)->get();
+        if ($this->frontendRepository->getTopic($topic)) {
+            return $this->frontendRepository->getPostTopicLatestArticle($topic, $quantity, 'published_at');
         } else {
             return response()->json(null, 200);
         }
-
     }
 
     public function showContactPage(): View
@@ -92,14 +92,10 @@ class FrontendController extends Controller
 
     public function showListPage(string $filter): View
     {
-        $topicResult = Topic::firstWhere('name', $filter);
+        $topicResult = $this->frontendRepository->getTopic($filter);
 
-        if ($topicResult) {
-            $filteredValues = $topicResult->posts()->paginate(12);
-            if ($filteredValues->isEmpty()) {
-                $filteredValues = null;
-            }
-        } else {
+        $filteredValues = $topicResult->posts()->paginate(12);
+        if ($filteredValues->isEmpty()) {
             $filteredValues = null;
         }
 
@@ -109,7 +105,7 @@ class FrontendController extends Controller
     public function contentListPage($filter): View
     {
         $filteredValues = [];
-        $topicResults = Topic::whereIn('name', $this->topicMapper()[$filter])->get();
+        $topicResults = $this->frontendRepository->contentListPage($filter);
 
         foreach($topicResults as $topicResult) {
             $filteredValues[] = $topicResult->posts()->paginate(6);
@@ -117,16 +113,4 @@ class FrontendController extends Controller
 
         return view('content/list')->with('filteredValues', $filteredValues);
     }
-
-    private function topicMapper(): array
-    {
-        return [
-            'Brands' => ['rolex','tudor','seiko','casio','hublot','omaga'],
-            'Classes' => ['cheap','affordable','premium','luxory'],
-            'Movement' => ['mechanical','automatic','quartz','solar'],
-            'Functionality' => ['analog','chronograph','digital','hybrid'],
-            'Style' => ['aviator','racing','diver','skeleton','wood','smart'],
-        ];
-    }
-
 }
