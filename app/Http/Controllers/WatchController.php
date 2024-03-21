@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Watch;
 use App\Repositories\WatchRepository;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;

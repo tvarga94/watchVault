@@ -4,7 +4,6 @@ namespace App\Repositories;
 
 use App\Interfaces\WatchInterface;
 use App\Models\Watch;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 

@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PopularPost;
 use App\Repositories\FrontendRepository;
 use Canvas\Models\Post;
-use Canvas\Models\Topic;
 use Illuminate\View\View;
 use function _PHPStan_8b6260c21\RingCentral\Psr7\_caseless_remove;
 
