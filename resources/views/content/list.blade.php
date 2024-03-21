@@ -33,7 +33,7 @@
                 @foreach($filteredValues as $filteredValue)
                     @foreach($filteredValue as $value)
                         <div class="innercolumns">
-                            <img src="https://cdn.proprivacy.com/storage/images/proprivacy/2016/11/cheapvpn_social-featured_image-recommened_webp.webp">
+                            <img src="{{ $value['featured_image'] }}" alt="featured_image" />
                             <div class="card-body">
                                 <div class="card-content">
                                     <h3 class="card-title"><a
