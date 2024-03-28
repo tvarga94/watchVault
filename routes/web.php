@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [FrontendController::class, 'showMainPage']);
+Route::get('/', [FrontendController::class, 'showMainPage'])->name('home');
 Route::get('/contact', [FrontendController::class, 'showContactPage'])->name('contact');
 Route::get('/about', [FrontendController::class, 'showAboutPage'])->name('about');
 Route::get('/advertising', [FrontendController::class, 'showAdvertisingPage'])->name('advertising');

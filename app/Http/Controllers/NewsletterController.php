@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\NewsletterSubscriptionRequest;
 use App\Repositories\NewsletterRepository;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 
 class NewsletterController
 {
@@ -14,12 +15,10 @@ class NewsletterController
         $this->newsletterRepository = $newsletterRepository;
     }
 
-    public function store(Request $request): JsonResponse
+    public function store(NewsletterSubscriptionRequest $request): RedirectResponse
     {
-        if (NULL !== $request->subscribe) {
-            $this->newsletterRepository->store($request);
+        $this->newsletterRepository->store($request);
 
-            return response()->json(['message' => 'Subscription successful!']);
-        }
+        return redirect()->route('home')->with('success', 'Subscription successful!');
     }
 }

@@ -2,13 +2,17 @@
 
 namespace App\Repositories;
 
+use App\Http\Requests\NewsletterSubscriptionRequest;
 use App\Models\Newsletter;
-use Illuminate\Http\Request;
 
 class NewsletterRepository
 {
-    public function store(Request $request): Newsletter
+    public function store(NewsletterSubscriptionRequest $request): Newsletter
     {
-        return Newsletter::create($request->post());
+        $validated = $request->validated();
+        return Newsletter::create([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+        ]);
     }
 }

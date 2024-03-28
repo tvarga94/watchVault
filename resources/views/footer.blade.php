@@ -1,6 +1,14 @@
 <footer class="footer push-element">
     <form id="newsletterForm" action="/newsletter/store" method="POST">
         <div id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;text-align: center;font-size: large"></div>
+        @if ($errors->has('email'))
+            <div style="color: red;text-align: center">{{ $errors->first('email') }}</div>
+        @endif
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         @csrf
         <div class="footer_container">
             <h4>Stay up to date with the latest post and updates</h4>
@@ -102,39 +110,4 @@
         </div>
     </div>
 </footer>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            var formData = new FormData(this);
-
-            fetch('/newsletter/store', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                }
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-
-                    var messageDiv = document.getElementById('subscriptionMessage');
-                    messageDiv.style.display = 'block';
-                    messageDiv.textContent = 'Successful subscription! Thank you for subscribing.';
-
-                    document.getElementById('newsletterForm').reset();
-
-                    setTimeout(function() {
-                        messageDiv.style.display = 'none';
-                    }, 3000);
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        });
-    });
-</script>
 

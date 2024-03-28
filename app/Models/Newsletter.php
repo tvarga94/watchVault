@@ -15,4 +15,6 @@ class Newsletter extends Model
         'name',
         'email'
     ];
+
+    protected $guarded = [];
 }
